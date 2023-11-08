@@ -126,6 +126,21 @@
         data-ps2id-offset="78"
       ></a>
     </div>
+    <!-- Start of health check
+    ================================================== -->
+      <div class="parent_ht_container">
+        <form id="healthcheck-form">
+          <input type="url" id="website-url" placeholder="Enter your website URL" required>
+          <button type="submit">Check Health</button>
+        </form>
+        
+        <div id="loader" style="display: none;">Loading...</div>
+        <div id="healthcheck-result"></div>
+        
+      </div>
+
+    <!-- End of health check
+    ================================================== -->
 
     <!-- About
     ================================================== -->
@@ -1139,6 +1154,12 @@
         });
       })(jQuery);
     </script>
+
+<script type="text/javascript" src="index.js">
+
+</script>
+
+
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript">

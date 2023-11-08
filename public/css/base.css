@@ -104,12 +104,12 @@ mark,
 audio,
 video,
 select {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 article,
 aside,
@@ -122,48 +122,48 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+	display: block;
 }
 body {
-  line-height: 1;
+	line-height: 1;
 }
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+	content: "";
+	content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* #Basic Styles
 ================================================== */
 body {
-  background: #f2f2f2;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 22px;
-  color: #434343;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-  -webkit-text-size-adjust: 100%;
+	background: #f2f2f2;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 22px;
+	color: #434343;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	-webkit-text-size-adjust: 100%;
 }
 html {
-  overflow-x: hidden;
-  width: 100%;
+	overflow-x: hidden;
+	width: 100%;
 }
 /* #Typography
 ================================================== */
@@ -173,10 +173,10 @@ h3,
 h4,
 h5,
 h6 {
-  color: #414141;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  text-align: center;
+	color: #414141;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	text-align: center;
 }
 h1 a,
 h2 a,
@@ -184,106 +184,106 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  font-weight: inherit;
+	font-weight: inherit;
 }
 h1 {
-  font-size: 40px;
-  line-height: 46px;
+	font-size: 40px;
+	line-height: 46px;
 }
 h2 {
-  font-size: 36px;
-  line-height: 42px;
+	font-size: 36px;
+	line-height: 42px;
 }
 h3 {
-  font-size: 30px;
-  line-height: 36px;
+	font-size: 30px;
+	line-height: 36px;
 }
 h4 {
-  font-size: 24px;
-  line-height: 30px;
+	font-size: 24px;
+	line-height: 30px;
 }
 h5 {
-  font-size: 20px;
-  line-height: 26px;
+	font-size: 20px;
+	line-height: 26px;
 }
 h6 {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 400;
 }
 
 p {
 }
 p img {
-  margin: 0;
+	margin: 0;
 }
 p.lead {
-  font-size: 21px;
-  line-height: 27px;
-  color: #777;
+	font-size: 21px;
+	line-height: 27px;
+	color: #777;
 }
 
 em {
-  font-style: italic;
+	font-style: italic;
 }
 strong {
-  font-weight: 600;
+	font-weight: 600;
 }
 small {
-  font-size: 80%;
+	font-size: 80%;
 }
 
 /*	Blockquotes  */
 blockquote,
 blockquote p {
-  font-size: 17px;
-  line-height: 24px;
-  color: #777;
+	font-size: 17px;
+	line-height: 24px;
+	color: #777;
 }
 blockquote {
-  margin: 0 0 20px;
-  padding: 9px 20px 0 19px;
+	margin: 0 0 20px;
+	padding: 9px 20px 0 19px;
 }
 blockquote cite {
-  display: block;
-  font-size: 12px;
-  color: #555;
+	display: block;
+	font-size: 12px;
+	color: #555;
 }
 blockquote cite:before {
-  content: "\2014 \0020";
+	content: "\2014 \0020";
 }
 blockquote cite a,
 blockquote cite a:visited,
 blockquote cite a:visited {
-  color: #555;
+	color: #555;
 }
 
 hr {
-  border: solid #323a3d;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 0 10px 0 10px;
-  height: 0;
-  position: relative;
+	border: solid #323a3d;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 0 10px 0 10px;
+	height: 0;
+	position: relative;
 }
 
 /* #Links
 ================================================== */
 a,
 a:visited {
-  text-decoration: none;
+	text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #e74c3c;
+	color: #e74c3c;
 }
 p a,
 p a:visited {
-  line-height: inherit;
-  text-decoration: none;
+	line-height: inherit;
+	text-decoration: none;
 }
 a:focus {
-  outline: none;
+	outline: none;
 }
 
 /* #Lists
@@ -292,31 +292,31 @@ ul,
 ol {
 }
 ul {
-  list-style: none outside;
+	list-style: none outside;
 }
 ol {
-  list-style: decimal;
+	list-style: decimal;
 }
 ol,
 ul.square,
 ul.circle,
 ul.disc {
-  margin-left: 30px;
+	margin-left: 30px;
 }
 ul.square {
-  list-style: square outside;
+	list-style: square outside;
 }
 ul.circle {
-  list-style: circle outside;
+	list-style: circle outside;
 }
 ul.disc {
-  list-style: disc outside;
+	list-style: disc outside;
 }
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-  font-size: 90%;
+	font-size: 90%;
 }
 ul ul li,
 ul ol li,
@@ -324,13 +324,13 @@ ol ol li,
 ol ul li {
 }
 li {
-  line-height: 18px;
+	line-height: 18px;
 }
 ul.large li {
-  line-height: 21px;
+	line-height: 21px;
 }
 li p {
-  line-height: 21px;
+	line-height: 21px;
 }
 /* #Buttons
 ================================================== */
@@ -340,20 +340,20 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  background: #363636;
-  margin-top: 10px;
-  border: none;
-  color: #dfdfdf;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  line-height: normal;
-  padding: 15px 25px;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  width: 100%;
+	background: #363636;
+	margin-top: 10px;
+	border: none;
+	color: #dfdfdf;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	line-height: normal;
+	padding: 15px 25px;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	width: 100%;
 }
 
 .button:hover,
@@ -368,7 +368,7 @@ button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active {
-  color: #e74c3c;
+	color: #e74c3c;
 }
 
 .button.full-width,
@@ -376,17 +376,17 @@ button.full-width,
 input[type="submit"].full-width,
 input[type="reset"].full-width,
 input[type="button"].full-width {
-  width: 100%;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  text-align: center;
+	width: 100%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	text-align: center;
 }
 
 /* Fix for odd Mozilla border & padding issues */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+	border: 0;
+	padding: 0;
 }
 /* #Images
 ================================================== */
@@ -394,53 +394,53 @@ input::-moz-focus-inner {
 /* #Misc
 ================================================== */
 .remove-bottom {
-  margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
 }
 .half-bottom {
-  margin-bottom: 10px !important;
+	margin-bottom: 10px !important;
 }
 .add-bottom {
-  margin-bottom: 20px !important;
+	margin-bottom: 20px !important;
 }
 .remove-top {
-  margin-top: 0 !important;
+	margin-top: 0 !important;
 }
 .half-top {
-  margin-top: 10px !important;
+	margin-top: 10px !important;
 }
 .add-top {
-  margin-top: 20px !important;
+	margin-top: 20px !important;
 }
 .add-top-big {
-  margin-top: 50px !important;
+	margin-top: 50px !important;
 }
 
 .clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
 }
 
 ::selection {
-  color: #fff;
+	color: #fff;
 }
 ::-moz-selection {
-  color: #fff;
+	color: #fff;
 }
 
 /* Custom css */
 .paragraph_parent {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .paragraph_w-3 {
-  max-width: 800px;
-  text-align: center;
+	max-width: 800px;
+	text-align: center;
 }
 
 /* Mobile */
@@ -449,25 +449,35 @@ input::-moz-focus-inner {
 
 /* Custom shadow title */
 .custom_shadow-title {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: -77px;
-  color: #414141;
-  opacity: 0.1;
-  font-family: "Montserrat", sans-serif;
-  font-size: 100px;
-  letter-spacing: -3px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 88px;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: -77px;
+	color: #414141;
+	opacity: 0.1;
+	font-family: "Montserrat", sans-serif;
+	font-size: 100px;
+	letter-spacing: -3px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 88px;
 }
 @media only screen and (max-width: 800px) {
-  .section-title .custom_shadow-title {
-    top: -62px;
-    font-size: 40px;
-    letter-spacing: 2px;
-    line-height: 42px;
-  }
+	.section-title .custom_shadow-title {
+		top: -62px;
+		font-size: 40px;
+		letter-spacing: 2px;
+		line-height: 42px;
+	}
 }
 /* End of custom shadow-title */
+
+/* Start of Healthcheck styles */
+.parent_ht_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0;
+	text-align: center;
+}
+/* End  of Healthcheck styles */
