@@ -33,17 +33,6 @@
     <!-- Favicons
 	================================================== -->
     <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="apple-touch-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="apple-touch-icon-114x114.png"
-    />
   </head>
   <body class="royal_preloader">
     <div id="royal_preloader"></div>
@@ -57,7 +46,7 @@
     <nav id="menu-wrap" class="menu-back cbp-af-header">
       <div class="container">
         <div class="twelve columns">
-          <div class="logo"></div>
+          <a href="index.html"><div class="logo"></div></a>
           <ul class="slimmenu">
             <li>
               <a href="#home">top</a>
@@ -72,17 +61,7 @@
               <a href="#blog">blogs</a>
             </li>
             <li>
-              <a href="#contact">hello</a>
-            </li>
-            <li>
-              <a href="shop.html">shop</a>
-            </li>
-            <li>
-              <a href="#">homepages</a>
-              <ul class="submenu-back">
-                <li><a href="../parallax/index.html">Parallax home</a></li>
-                <li><a href="../slider/index.html">Slider home</a></li>
-              </ul>
+              <a href="contact-us.html">contact us</a>
             </li>
           </ul>
         </div>
@@ -115,7 +94,9 @@
           volume="0"
           poster="images/trans.png"
         >
-          <source src="videos/video_main.mp4" type="video/mp4" />
+          <source src="videos/video.webm" type="video/webm" />
+          <source src="videos/video.mp4" type="video/mp4" />
+          <source src="videos/video.ogg" type="video/ogg" />
         </video>
       </div>
 
@@ -126,28 +107,85 @@
         data-ps2id-offset="78"
       ></a>
     </div>
-    <!-- Start of health check
-    ================================================== -->
-      <div class="parent_ht_container">
-        <form id="healthcheck-form">
-          <input type="url" id="website-url" placeholder="Enter your website URL" required>
-          <button type="submit">Check Health</button>
-        </form>
-        
-        <div id="loader" style="display: none;">Loading...</div>
-        <div id="healthcheck-result"></div>
-        
+
+    <!-- Healthcheck start -->
+    <div class="healthcheck_parent">
+      <div class="text-align-center healthcheck_title">
+        <h2 class="section-title h2 ht_h2">Brand Health Analysis: Unlock Your Company's Potential</h2>
+        <p>Curious about the health of your brand? Let's find out! Simply enter your name and company details below, and choose how you'd like to receive your results.</p>
       </div>
+      <div class="healthcheck_child">
+        <form name="ajax-form" id="ajax-form" class="healthcheck_form" onsubmit="sendEmail(event)">
+          <div
+          class="hidden"
+          data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
+        >
+          <label for="name">
+            <span class="error" id="err-name">please enter name</span>
+          </label>
+          <input type="hidden" id="sendername" name="sendername" value="Healthcheck">
+        </div>
+          <div
+            class=""
+            data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
+          >
+            <input
+              required
+              name="email"
+              id="senderemail"
+              type="text"
+              placeholder="E-Mail: *"
+            />
+          </div>
+          <div
+            class="twelve columns"
+            data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
+          >
+            <label for="message"></label>
+            <input
+              class="healthcheck_textarea"
+              required
+              name="message"
+              id="message"
+              placeholder="Website URL"
+            ></input>
+          </div>
+          <div class="select_parent">
+            <select class="dropdown" id="message-dropdown">
+              <option value="">Select your preferred consultation method:</option>
+              <option value="Receive Results via Email">Receive Results via Email</option>
+              <option value="calendly30min"> 30-Minute Free Consultation Call</option>
+              <option value="calendly1hour"> 1-Hour Consultation Call (€40)</option>
+            </select>
+          </div>
+          <div
+            class=""
+            data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
+          >
+            <div id="button-con">
+              <button
+                class="send_message button-effect button--moema button--text-thick button--text-upper button--size-s"
+                id="healthcheck-send" 
+                type="submit"
+                data-lang="en"
+              >
+                send
+              </button>
+            </div>
+          </div>
+          <div class="clear"></div>
+         
+        </form>
+      </div>
+    </div>
 
-    <!-- End of health check
-    ================================================== -->
-
+    <!-- Healthcheck end -->
     <!-- About
     ================================================== -->
 
     <div id="about">
       <div class="section padding-top-bottom background-color-grey">
-        <div class="container">
+        <div class="container mt-150">
           <div
             class="twelve columns"
             data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
@@ -155,7 +193,7 @@
             <div class="section-title">
               <h2>Kakushin</h2>
               <div class="custom_shadow-title">
-                Were dreams become <br />
+                Where dreams become <br />
                 innovations
               </div>
             </div>
@@ -169,10 +207,12 @@
                 Introducing Kakushin, your ultimate destination for elevating
                 your startup's brand. We excel at launching new businesses into
                 their markets with a compelling and unforgettable brand
-                identity. From defining your brand's purpose and positioning to
-                crafting an indelible visual identity, we're your trusted
-                partner, ensuring your brand stands out and makes a lasting
-                impression.
+                identity.
+
+                <br />
+                From defining your brand's purpose and positioning to crafting
+                an indelible visual identity, we're your trusted partner,
+                ensuring your brand stands out and makes a lasting impression.
               </p>
             </div>
           </div>
@@ -185,7 +225,37 @@
             data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
           >
             <div class="section-title">
-              <h4>Our team</h4>
+              <h4>Our Team</h4>
+            </div>
+            <div class="paragraph_parent">
+              <p class="text-padding paragraph_w-3">
+                Our core strength lies in a team of seasoned experts, each
+                excelling in their specific domains, collectively forming a
+                powerhouse for innovation and execution. In the realm of
+                rebranding, our team excels, with creative designers, strategic
+                marketers, diligent researchers, adept communicators, and
+                tech-savvy developers collaborating to deliver a holistic
+                approach that propels brands into a new era of success. Our
+                extensive skill set is the key to transforming abstract concepts
+                into compelling brand narratives, making us a formidable ally in
+                the competitive marketplace.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="section padding-bottom background-color-grey"
+        style="background-color: #f7f7f7; margin: 5rem 0; padding: 3rem 0"
+      >
+        <div class="container">
+          <div
+            class="twelve columns"
+            data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
+          >
+            <div class="section-title">
+              <h4>Our Services</h4>
             </div>
           </div>
           <div
@@ -196,29 +266,15 @@
               <img src="images/t5.jpg" alt="" />
               <div class="mask"></div>
               <ul>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons twitter">&#xf099;</div></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons dribbble">&#xf17d;</div></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons linkedin">&#xf0e1;</div></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons vimeo">&#xf27d;</div></a
-                  >
-                </li>
+                <p class="white_text">
+                  From crafting a distinctive brand identity to orchestrating
+                  effective brand activation strategies, we've got you fully
+                  covered. Our mission is to empower you to establish a
+                  commanding brand presence, forge meaningful connections with
+                  your target audience, and realize your ambitious goals.
+                </p>
               </ul>
-              <h6>Spiridoula Trakakis</h6>
-              <div class="subtext">Founder</div>
+              <h6>Branding</h6>
             </div>
           </div>
           <div
@@ -229,29 +285,16 @@
               <img src="images/t4.jpg" alt="" />
               <div class="mask"></div>
               <ul>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons twitter">&#xf099;</div></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons linkedin">&#xf0e1;</div></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons facebook">&#xf09a;</div></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons vimeo">&#xf27d;</div></a
-                  >
-                </li>
+                <p class="white_text">
+                  Unleash the potential of your business and breathe life into
+                  your ideas through strategic marketing initiatives. Our
+                  approach is grounded in meticulous research, ensuring that we
+                  deliver innovative solutions that stand outside the
+                  conventional norms while aligning seamlessly with your core
+                  objectives.
+                </p>
               </ul>
-              <h6>Spiridoula Trakakis</h6>
-              <div class="subtext">Art Director</div>
+              <h6>Marketing</h6>
             </div>
           </div>
           <div
@@ -262,29 +305,15 @@
               <img src="images/t1.jpg" alt="" />
               <div class="mask"></div>
               <ul>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons twitter">&#xf099;</div></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons dribbble">&#xf17d;</div></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons facebook">&#xf09a;</div></a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="social-icon"
-                    ><div class="icons vimeo">&#xf27d;</div></a
-                  >
-                </li>
+                <p class="white_text">
+                  From ideation to execution, we cover every step of your
+                  project's journey, ensuring it evolves into a successful
+                  reality. We work tirelessly to turn your concepts into
+                  concrete outcomes, helping you reach your milestones and
+                  objectives efficiently and effectively.
+                </p>
               </ul>
-              <h6>Spiridoula Trakakis</h6>
-              <div class="subtext">Development</div>
+              <h6>Development</h6>
             </div>
           </div>
         </div>
@@ -294,7 +323,7 @@
     <!-- separate
     ================================================== -->
 
-    <div class="section sep-1-background">
+    <!-- <div class="section sep-1-background">
       <div id="owl-sep-1" class="owl-carousel owl-theme">
         <div class="item">
           <div class="container padding-top-bottom">
@@ -379,21 +408,391 @@
             </div>
           </div>
         </div>
-        <div class="item">
-          <div class="container padding-top-bottom">
-            <div class="four columns background-color-white-trans">
-              <div class="services">
-                <div class="number">7.</div>
-                <h6>Basic Rebranding</h6>
-                <p>
-                  Our Basic Rebranding package is perfect for small businesses
-                  and startups with budget constraints. In this package, we
-                  provide a refreshed brand identity An ideal choice for those
-                  seeking a fresh look without delving deep into their branding.
+      </div>
+    </div> -->
+
+    <div id="about">
+      <div class="section padding-top-bottom background-color-grey">
+        <div class="container">
+          <div
+            class="twelve columns"
+            data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
+          >
+            <div class="section-title">
+              <h2>Branding Packages</h2>
+              <div class="custom_shadow-title">
+                Choose Excellence <br />
+                with Us
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-container">
+        <div class="parent_Box">
+          <!-- Box 1 -->
+          <div class="box">
+            <h3>Brand Revive Accelerator</h3>
+            <img
+              class="svg_box_icon"
+              src="images/svgs/basic.svg"
+              alt="basic_icon"
+            />
+            <div class="parent_h3"><h3 class="h3_box">Scope:</h3></div>
+            <p class="product p_box" data-name="p-1">
+              A quick and lively package designed for small businesses and
+              startups, delivering a refreshed brand identity, logo revamp, and
+              vibrant brand essentials in just 2-4 weeks.
+              <button data-name="p-1" class="btn btn1 projects_btn">
+                Learn more about brand revive accelerator
+              </button>
+            </p>
+          </div>
+          <!-- Popup for box 1 -->
+
+          <!-- ...... -->
+          <!-- Box 2 -->
+          <div class="box">
+            <h3>Momentum Builder Suite</h3>
+            <img
+              class="svg_box_icon"
+              src="images/svgs/middle.svg"
+              alt="middle_tier_icon"
+            />
+            <div class="parent_h3"><h3 class="h3_box">Scope:</h3></div>
+            <p class="p_box">
+              Perfect for mid-sized businesses, this package provides a dynamic
+              rebranding strategy over 6-8 weeks, including logo restyling, an
+              extended color palette, lively typography choices, UI mockups, and
+              spirited content marketing.
+              <button data-name="p-2" class="btn btn2 projects_btn">
+                Learn more about mid-sized bussiness plan
+              </button>
+            </p>
+          </div>
+          <!-- Popup for box 2 -->
+
+          <!-- ...... -->
+          <!-- Box 3 -->
+          <div class="box">
+            <h3>Total Brand Revamp</h3>
+            <img
+              class="svg_box_icon"
+              src="images/svgs/full.svg"
+              alt="full_tier_icon"
+            />
+            <div class="parent_h3"><h3 class="h3_box">Scope:</h3></div>
+            <p class="p_box">
+              The ultimate rebranding experience spanning 10-12 weeks, offering
+              a colorful array of services. It includes an energetic logo
+              redesign, a comprehensive brand color spectrum, typography
+              dynamism, UI/UX wizardry, and all-encompassing marketing support.
+              <button data-name="p-3" class="btn btn3 projects_btn">
+                Learn more about a total brand revamp
+              </button>
+            </p>
+          </div>
+          <!-- Popup for box 3 -->
+
+          <!-- ...... -->
+          <!-- Box 4 -->
+          <div class="box">
+            <h3>Customized Brand Excellence</h3>
+            <img
+              class="svg_box_icon"
+              src="images/svgs/custom.svg"
+              alt="tailored"
+            />
+            <div class="parent_h3"><h3 class="h3_box">Scope:</h3></div>
+            <p class="p_box">
+              or large corporations and businesses with unique rebranding needs,
+              this package provides a personalized and playful approach. It
+              encompasses a kaleidoscope of services, ensuring your brand's
+              metamorphosis is both fun and professional.
+              <button data-name="p-4" class="btn btn4 projects_btn">
+                Learn more about customized brand excellence
+              </button>
+            </p>
+          </div>
+          <!-- Popup for box 4 -->
+
+          <!-- ...... -->
+
+          <div class="products-preview">
+            <div class="preview" data-target="p-1">
+              <img
+                class="closeIcon"
+                src="./images/close.png"
+                alt="closingIcon"
+              />
+
+              <h3>Brand Revive Accelerator</h3>
+              <div class="stars"></div>
+              <p class="p_box">
+                Designed for small businesses and startups seeking an
+                entry-level rebranding solution. In just 2-4 weeks, we offer a
+                revitalized brand identity with logo redesign, a new brand color
+                palette, and typography selection, all presented in a basic
+                brand guidelines document.
+                <br />
+                <br />
+                This package also includes content marketing services, SEO for
+                enhanced online visibility, social media management for a
+                consistent online presence, email marketing campaigns, online
+                advertising (Google Ads and social media), promotional video
+                production, and public relations services for increased brand
+                awareness.
+                <br />
+                <br />
+                It's the perfect choice for businesses with budget constraints
+                looking to refresh their brand and amplify their online presence
+                and marketing efforts.
+              </p>
+            </div>
+
+            <div class="preview" data-target="p-2">
+              <img
+                class="closeIcon"
+                src="./images/close.png"
+                alt="closingIcon"
+              />
+
+              <h3>Momentum Builder Suite</h3>
+              <div class="stars">
+                <p class="p_box">
+                  Designed for mid-sized businesses and startups aiming to
+                  reposition themselves in the market while prioritizing a
+                  comprehensive rebranding strategy with an emphasis on
+                  marketing.
+                  <br />
+                  <br />
+                  With a duration of 6-8 weeks, this package includes a range of
+                  services, such as a thorough logo redesign with 2-3
+                  variations, an extended color palette encompassing primary,
+                  secondary, and tertiary colors, a structured typography
+                  hierarchy for headings, subheadings, body, and captions, basic
+                  UI mockups for a website landing page, and a standard brand
+                  guidelines document that provides in-depth guidance on brand
+                  application.
+                  <br />
+                  <br />
+                  Moreover, our Middle Tier Rebranding package incorporates
+                  content marketing services, covering blog posts, articles, and
+                  social media content, as well as Search Engine Optimization
+                  (SEO) services to enhance online visibility.
+                  <br />
+                  <br />
+                  We offer an effective social media management plan to maintain
+                  a consistent online presence and engage with your target
+                  audience. The package also includes meticulously crafted email
+                  marketing campaigns with sample templates, and public
+                  relations services to boost brand awareness and secure media
+                  coverage.
+                </p>
+              </div>
+            </div>
+
+            <div class="preview" data-target="p-3">
+              <img
+                class="closeIcon"
+                src="./images/close.png"
+                alt="closingIcon"
+              />
+
+              <h3>Total Brand Revamp</h3>
+              <div class="stars">
+                <p class="p_box">
+                  Introducing our Full Rebranding package, the ultimate solution
+                  for established businesses or startups seeking a complete
+                  brand transformation along with comprehensive marketing
+                  support.
+                  <br />
+                  <br />
+                  In a span of 10-12 weeks, this package offers an extensive
+                  array of services, including in-depth logo redesign with
+                  multiple variations, a comprehensive brand color suite, a full
+                  typography system, UI/UX website redesign, and the design of
+                  key marketing collateral. It also provides in-depth brand
+                  guidelines, social media profile and cover image design,
+                  content marketing, SEO services, social media management,
+                  email marketing campaigns, online advertising, video
+                  production, and public relations support.
+                  <br />
+                  <br />
+                  Perfect for those in need of a total brand overhaul, our Full
+                  Rebranding package ensures your brand's complete and impactful
+                  revitalization.
+                </p>
+              </div>
+            </div>
+
+            <div class="preview" data-target="p-4">
+              <img
+                class="closeIcon"
+                src="./images/close.png"
+                alt="closingIcon"
+              />
+
+              <h3>Customized Brand Excellence</h3>
+              <div class="stars">
+                <p class="p_box">
+                  A bespoke solution tailored to meet the unique needs of large
+                  corporations and businesses with specific rebranding
+                  requirements.
+                  <br />
+                  <br />
+                  Our offering encompasses a wide range of services, including
+                  logo variations, brand collateral designs, web and app design,
+                  product packaging, merchandise design, physical branding,
+                  multi-language guidelines, video branding, content marketing,
+                  SEO, social media management, email campaigns, online
+                  advertising, video production, public relations, stakeholder
+                  interviews, and custom brand strategy sessions.
+                  <br />
+                  <br />
+                  This comprehensive suite provides a one-stop solution,
+                  delivering a personalized and holistic approach to rebranding,
+                  making it the perfect choice for businesses seeking a tailored
+                  and all-encompassing rebranding solution
                 </p>
               </div>
             </div>
           </div>
+
+          <!-- <div class="box">
+            <h3>
+              Basic Rebranding (Entry-Level) <br />
+              Duration: 2-4 weeks
+            </h3>
+            <img
+              class="svg_box_icon"
+              src="images/svgs/basic.svg"
+              alt="basic_icon"
+            />
+            <div class="parent_h3"><h3 class="h3_box">Scope:</h3></div>
+            <p class="p_box">
+              Designed for small businesses and startups seeking an entry-level
+              rebranding solution. In just 2-4 weeks, we offer a revitalized brand
+              identity with logo redesign, a new brand color palette, and
+              typography selection, all presented in a basic brand guidelines
+              document.
+              <br />
+              <br />
+              This package also includes content marketing services, SEO for
+              enhanced online visibility, social media management for a consistent
+              online presence, email marketing campaigns, online advertising
+              (Google Ads and social media), promotional video production, and
+              public relations services for increased brand awareness.
+              <br />
+              <br />
+              It's the perfect choice for businesses with budget constraints
+              looking to refresh their brand and amplify their online presence and
+              marketing efforts.
+            </p>
+          </div>
+          <div class="box">
+            <h3>
+              Middle Tier Rebranding <br />
+              Duration: 6-8 weeks
+            </h3>
+            <img
+              class="svg_box_icon"
+              src="images/svgs/middle.svg"
+              alt="middle_tier_icon"
+            />
+            <div class="parent_h3"><h3 class="h3_box">Scope:</h3></div>
+            <p class="p_box">
+              Designed for mid-sized businesses and startups aiming to reposition
+              themselves in the market while prioritizing a comprehensive
+              rebranding strategy with an emphasis on marketing.
+              <br />
+              <br />
+              With a duration of 6-8 weeks, this package includes a range of
+              services, such as a thorough logo redesign with 2-3 variations, an
+              extended color palette encompassing primary, secondary, and tertiary
+              colors, a structured typography hierarchy for headings, subheadings,
+              body, and captions, basic UI mockups for a website landing page, and
+              a standard brand guidelines document that provides in-depth guidance
+              on brand application.
+              <br />
+              <br />
+              Moreover, our Middle Tier Rebranding package incorporates content
+              marketing services, covering blog posts, articles, and social media
+              content, as well as Search Engine Optimization (SEO) services to
+              enhance online visibility.
+              <br />
+              <br />
+              We offer an effective social media management plan to maintain a
+              consistent online presence and engage with your target audience. The
+              package also includes meticulously crafted email marketing campaigns
+              with sample templates, and public relations services to boost brand
+              awareness and secure media coverage.
+            </p>
+          </div>
+          <div class="box">
+            <h3>
+              Full Rebranding <br />
+              Duration: 10-12 weeks
+            </h3>
+            <img
+              class="svg_box_icon"
+              src="images/svgs/full.svg"
+              alt="full_tier_icon"
+            />
+            <div class="parent_h3"><h3 class="h3_box">Scope:</h3></div>
+            <p class="p_box">
+              Introducing our Full Rebranding package, the ultimate solution for
+              established businesses or startups seeking a complete brand
+              transformation along with comprehensive marketing support.
+              <br />
+              <br />
+              In a span of 10-12 weeks, this package offers an extensive array of
+              services, including in-depth logo redesign with multiple variations,
+              a comprehensive brand color suite, a full typography system, UI/UX
+              website redesign, and the design of key marketing collateral. It
+              also provides in-depth brand guidelines, social media profile and
+              cover image design, content marketing, SEO services, social media
+              management, email marketing campaigns, online advertising, video
+              production, and public relations support.
+              <br />
+              <br />
+              Perfect for those in need of a total brand overhaul, our Full
+              Rebranding package ensures your brand's complete and impactful
+              revitalization.
+            </p>
+          </div>
+          <div class="box">
+            <h3>
+              Tailored Rebranding <br />
+              Duration: Custom (based on requirements)
+            </h3>
+            <img
+              class="svg_box_icon"
+              src="images/svgs/custom.svg"
+              alt="tailored"
+            />
+            <div class="parent_h3"><h3 class="h3_box">Scope:</h3></div>
+            <p class="p_box">
+              A bespoke solution tailored to meet the unique needs of large
+              corporations and businesses with specific rebranding requirements.
+              <br />
+              <br />
+              Our offering encompasses a wide range of services, including logo
+              variations, brand collateral designs, web and app design, product
+              packaging, merchandise design, physical branding, multi-language
+              guidelines, video branding, content marketing, SEO, social media
+              management, email campaigns, online advertising, video production,
+              public relations, stakeholder interviews, and custom brand strategy
+              sessions.
+              <br />
+              <br />
+              This comprehensive suite provides a one-stop solution, delivering a
+              personalized and holistic approach to rebranding, making it the
+              perfect choice for businesses seeking a tailored and
+              all-encompassing rebranding solution
+            </p>
+          </div> -->
         </div>
       </div>
     </div>
@@ -409,7 +808,7 @@
             data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
           >
             <div class="section-title">
-              <h2>Our work</h2>
+              <h2>Our projects</h2>
               <div class="shadow-title">we do magic</div>
             </div>
           </div>
@@ -421,16 +820,16 @@
         >
           <div class="slide">
             <h2 class="slide__title slide__title--preview">
-              Project Name <span class="slide__price">BRANDING</span>
+              <!-- Project Name <span class="slide__price">BRANDING</span> -->
             </h2>
             <div class="slide__item">
               <div class="slide__inner">
                 <img
                   class="slide__img slide__img--small"
-                  src="images/small/1.jpg"
+                  src="images/small/1.png"
                   alt="Some image"
                 />
-                <a class="group1" href="images/small/1.jpg"
+                <a class="group1" href="images/small/1.png"
                   ><div class="action action--open" aria-label="View details">
                     <i class="fa fa-plus"></i></div
                 ></a>
@@ -439,16 +838,16 @@
           </div>
           <div class="slide">
             <h2 class="slide__title slide__title--preview">
-              Project Name <span class="slide__price">MARKETING</span>
+              <!-- Project Name <span class="slide__price">MARKETING</span> -->
             </h2>
             <div class="slide__item">
               <div class="slide__inner">
                 <img
                   class="slide__img slide__img--small"
-                  src="images/small/2.jpg"
+                  src="images/small/2.png"
                   alt="Some image"
                 />
-                <a class="group1" href="images/small/2.jpg"
+                <a class="group1" href="images/small/2.png"
                   ><div class="action action--open" aria-label="View details">
                     <i class="fa fa-plus"></i></div
                 ></a>
@@ -457,16 +856,16 @@
           </div>
           <div class="slide">
             <h2 class="slide__title slide__title--preview">
-              Project Name <span class="slide__price">DEVELOPMENT</span>
+              <!-- Project Name <span class="slide__price">DEVELOPMENT</span> -->
             </h2>
             <div class="slide__item">
               <div class="slide__inner">
                 <img
                   class="slide__img slide__img--small"
-                  src="images/small/3.jpg"
+                  src="images/small/3.png"
                   alt="Some image"
                 />
-                <a class="group1" href="images/small/3.jpg"
+                <a class="group1" href="images/small/3.png"
                   ><div class="action action--open" aria-label="View details">
                     <i class="fa fa-plus"></i></div
                 ></a>
@@ -475,16 +874,16 @@
           </div>
           <div class="slide">
             <h2 class="slide__title slide__title--preview">
-              Project Name <span class="slide__price">BASIC REBRANDING</span>
+              <!-- Project Name <span class="slide__price">BASIC REBRANDING</span> -->
             </h2>
             <div class="slide__item">
               <div class="slide__inner">
                 <img
                   class="slide__img slide__img--small"
-                  src="images/small/4.jpg"
+                  src="images/small/4.png"
                   alt="Some image"
                 />
-                <a class="group1" href="images/small/4.jpg"
+                <a class="group1" href="images/small/4.png"
                   ><div class="action action--open" aria-label="View details">
                     <i class="fa fa-plus"></i></div
                 ></a>
@@ -493,17 +892,17 @@
           </div>
           <div class="slide">
             <h2 class="slide__title slide__title--preview">
-              Project Name
-              <span class="slide__price">MIDDLE TIER REBRANDING</span>
+              <!-- Project Name
+              <span class="slide__price">MIDDLE TIER REBRANDING</span> -->
             </h2>
             <div class="slide__item">
               <div class="slide__inner">
                 <img
                   class="slide__img slide__img--small"
-                  src="images/small/4.jpg"
+                  src="images/small/5.png"
                   alt="Some image"
                 />
-                <a class="group1" href="images/small/4.jpg"
+                <a class="group1" href="images/small/5.png"
                   ><div class="action action--open" aria-label="View details">
                     <i class="fa fa-plus"></i></div
                 ></a>
@@ -512,16 +911,16 @@
           </div>
           <div class="slide">
             <h2 class="slide__title slide__title--preview">
-              Project Name <span class="slide__price">FULL REBRANDING</span>
+              <!-- Project Name <span class="slide__price">FULL REBRANDING</span> -->
             </h2>
             <div class="slide__item">
               <div class="slide__inner">
                 <img
                   class="slide__img slide__img--small"
-                  src="images/small/4.jpg"
+                  src="images/small/7.png"
                   alt="Some image"
                 />
-                <a class="group1" href="images/small/4.jpg"
+                <a class="group1" href="images/small/7.png"
                   ><div class="action action--open" aria-label="View details">
                     <i class="fa fa-plus"></i></div
                 ></a>
@@ -530,162 +929,39 @@
           </div>
           <div class="slide">
             <h2 class="slide__title slide__title--preview">
-              Project Name
-              <span class="slide__price">CUSTOMIZED REBRANDING</span>
+              <!-- Project Name
+              <span class="slide__price">CUSTOMIZED REBRANDING</span> -->
             </h2>
             <div class="slide__item">
               <div class="slide__inner">
                 <img
                   class="slide__img slide__img--small"
-                  src="images/small/4.jpg"
+                  src="images/small/9.png"
                   alt="Some image"
                 />
-                <a class="group1" href="images/small/4.jpg"
+                <a class="group1" href="images/small/9.png"
                   ><div class="action action--open" aria-label="View details">
                     <i class="fa fa-plus"></i></div
                 ></a>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="section padding-bottom background-color-grey">
-        <div class="container">
-          <div
-            class="twelve columns"
-            data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
-          >
-            <div class="section-title">
-              <h4>All projects KAKUSHIN TODO</h4>
-            </div>
-          </div>
-        </div>
-        <div
-          id="portfolio-filter"
-          data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
-        >
-          <ul id="filter">
-            <li>
-              <a href="#" class="current" data-filter="*" title="">all</a>
-            </li>
-            <li><a href="#" data-filter=".branding" title="">branding</a></li>
-            <li><a href="#" data-filter=".photo" title="">photo</a></li>
-            <li><a href="#" data-filter=".motion" title="">motion</a></li>
-            <li><a href="#" data-filter=".web" title="">web</a></li>
-          </ul>
-        </div>
-
-        <div id="projects-grid">
-          <a href="project-1.html">
-            <div class="portfolio-box-1 photo web">
-              <div class="mask-1"></div>
-              <img src="images/portfolio/2.jpg" alt="" />
-              <h6>Bulb Fiction</h6>
-              <p>photo</p>
-            </div>
-          </a>
-          <a href="project-2.html">
-            <div class="portfolio-box-1 branding">
-              <div class="mask-1"></div>
-              <img src="images/portfolio/3.jpg" alt="" />
-              <h6>Hang Around</h6>
-              <p>branding</p>
-            </div>
-          </a>
-          <a href="project-3.html">
-            <div class="portfolio-box-1 motion">
-              <div class="mask-1"></div>
-              <img src="images/portfolio/4.jpg" alt="" />
-              <h6>SLICE</h6>
-              <p>motion</p>
-            </div>
-          </a>
-          <a href="project-1.html">
-            <div class="portfolio-box-1 web">
-              <div class="mask-1"></div>
-              <img src="images/portfolio/5.jpg" alt="" />
-              <h6>Tube Chair</h6>
-              <p>web</p>
-            </div>
-          </a>
-          <a href="project-2.html">
-            <div class="portfolio-box-1 motion">
-              <div class="mask-1"></div>
-              <img src="images/portfolio/6.jpg" alt="" />
-              <h6>Turn Around</h6>
-              <p>motion</p>
-            </div>
-          </a>
-          <a href="project-3.html">
-            <div class="portfolio-box-1 photo">
-              <div class="mask-1"></div>
-              <img src="images/portfolio/7.jpg" alt="" />
-              <h6>Pebble</h6>
-              <p>photo</p>
-            </div>
-          </a>
-          <a href="project-1.html">
-            <div class="portfolio-box-1 branding">
-              <div class="mask-1"></div>
-              <img src="images/portfolio/8.jpg" alt="" />
-              <h6>Shanghay Chair</h6>
-              <p>branding</p>
-            </div>
-          </a>
-          <a href="project-2.html">
-            <div class="portfolio-box-1 branding">
-              <div class="mask-1"></div>
-              <img src="images/portfolio/1.jpg" alt="" />
-              <h6>TMA-1 X</h6>
-              <p>branding</p>
-            </div>
-          </a>
-          <a href="project-3.html">
-            <div class="portfolio-box-1 web">
-              <div class="mask-1"></div>
-              <img src="images/portfolio/9.jpg" alt="" />
-              <h6>Tracks Leather</h6>
-              <p>web</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="section padding-top-bottom-small background-color-white">
-        <div class="container">
-          <div
-            class="twelve columns"
-            data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
-          >
-            <div id="owl-logo" class="owl-carousel owl-theme">
-              <div class="item">
-                <img src="images/logos/1.png" alt="" />
-              </div>
-              <div class="item">
-                <img src="images/logos/2.png" alt="" />
-              </div>
-              <div class="item">
-                <img src="images/logos/3.png" alt="" />
-              </div>
-              <div class="item">
-                <img src="images/logos/4.png" alt="" />
-              </div>
-              <div class="item">
-                <img src="images/logos/5.png" alt="" />
-              </div>
-              <div class="item">
-                <img src="images/logos/6.png" alt="" />
-              </div>
-              <div class="item">
-                <img src="images/logos/1.png" alt="" />
-              </div>
-              <div class="item">
-                <img src="images/logos/2.png" alt="" />
-              </div>
-              <div class="item">
-                <img src="images/logos/3.png" alt="" />
-              </div>
-              <div class="item">
-                <img src="images/logos/4.png" alt="" />
+          <div class="slide">
+            <h2 class="slide__title slide__title--preview">
+              <!-- Project Name
+              <span class="slide__price">CUSTOMIZED REBRANDING</span> -->
+            </h2>
+            <div class="slide__item">
+              <div class="slide__inner">
+                <img
+                  class="slide__img slide__img--small"
+                  src="images/small/10.png"
+                  alt="Some image"
+                />
+                <a class="group1" href="images/small/10.png"
+                  ><div class="action action--open" aria-label="View details">
+                    <i class="fa fa-plus"></i></div
+                ></a>
               </div>
             </div>
           </div>
@@ -705,15 +981,15 @@
                 <div class="quotes-1">&#xf10e;</div>
                 <div class="quotes-2">&#xf10d;</div>
                 <p>
-                  Designing is a matter of concentration. You go deep into what
-                  you want to do. It's about intensive research, really. The
-                  concentration is warm and intimate and like the fire inside
-                  the earth - intense but not distorted. You can go to a place,
-                  really feel it in your heart. It's actually a beautiful
-                  feeling.
+                  As a female founder, I've found working with Kakushin to be
+                  refreshingly empowering. Their innovative approach and
+                  steadfast support have taken my brand to new heights. Kakushin
+                  values the voices of female founders, making the collaboration
+                  both inspiring and empowering. Partnering with them has been a
+                  truly exceptional experience.
                 </p>
                 <p></p>
-                <h6>Peter Zumthor</h6>
+                <h6>Aisha</h6>
               </div>
             </div>
           </div>
@@ -725,14 +1001,13 @@
                 <div class="quotes-1">&#xf10e;</div>
                 <div class="quotes-2">&#xf10d;</div>
                 <p>
-                  Design is about creating spaces for people to enjoy and of
-                  course, creating moments where you elevate the spirit, but
-                  'design for good' is figuring out a program that not only
-                  creates better spaces, but creates jobs, creates new industry
-                  and really kind of raises the conversation about how we
-                  rebuild.
+                  Working with Kakushin was like embarking on a creative
+                  adventure. Their cool ideas and artsy vibes gave our brand a
+                  fresh new look, making it super relatable. The support they
+                  gave us throughout was solid, showing they're all about
+                  surpassing expectations.
                 </p>
-                <h6>Cameron Sinclair</h6>
+                <h6>Ramneek</h6>
               </div>
             </div>
           </div>
@@ -744,13 +1019,139 @@
                 <div class="quotes-1">&#xf10e;</div>
                 <div class="quotes-2">&#xf10d;</div>
                 <p>
-                  Graphic design, which evokes the symmetria of Vituvius, the
-                  dynamic symmetry of Hambidge, the asymmetry of Mondrian; which
-                  is a good gestalt, generated by intuition or by computer, by
-                  invention or by a system of coordinates, is not good design if
-                  it does not communicate.
+                  Kakushin's approach is refreshingly client-focused. They
+                  totally got what our brand was all about, and the rebrand they
+                  pulled off really hit home with our audience. The smart ideas
+                  they tossed our way made the whole process a breeze.
                 </p>
-                <h6>Paul Rand</h6>
+                <h6>Ali</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padding-top-bottom">
+            <div class="twelve columns background-color-white-trans">
+              <div class="quote">
+                <div class="quotes-1">&#xf10e;</div>
+                <div class="quotes-2">&#xf10d;</div>
+                <p>
+                  Kakushin's work was next level. Every design they did was
+                  spot-on, and their strategic guidance was smart. Their support
+                  team was just a message away, always there to guide us through
+                  the rebranding journey.
+                </p>
+                <h6>Waseem</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padding-top-bottom">
+            <div class="twelve columns background-color-white-trans">
+              <div class="quote">
+                <div class="quotes-1">&#xf10e;</div>
+                <div class="quotes-2">&#xf10d;</div>
+                <p>
+                  The Kakushin squad put us first. They really listened to what
+                  we needed, and their support was super personalized. Their
+                  creative skills are off the charts, and our new brand identity
+                  is the coolest.
+                </p>
+                <h6>James</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padding-top-bottom">
+            <div class="twelve columns background-color-white-trans">
+              <div class="quote">
+                <div class="quotes-1">&#xf10e;</div>
+                <div class="quotes-2">&#xf10d;</div>
+                <p>
+                  Kakushin isn't just about making things look good – they're
+                  all about crafting a brand story. Their consistent support and
+                  client-first approach made us feel valued. The quality of
+                  their work has set a new standard for us.
+                </p>
+                <p></p>
+                <h6>Nick</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padding-top-bottom">
+            <div class="twelve columns background-color-white-trans">
+              <div class="quote">
+                <div class="quotes-1">&#xf10e;</div>
+                <div class="quotes-2">&#xf10d;</div>
+                <p>
+                  Working alongside Kakushin on our brand makeover was akin to
+                  embarking on a creative odyssey. Their innovative thinking and
+                  artistic approach breathed new life into our brand, making it
+                  more relevant and engaging. The support we received throughout
+                  the journey was steadfast, showcasing their dedication to not
+                  just meet, but exceed client expectations.
+                </p>
+                <h6>Andreas</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padding-top-bottom">
+            <div class="twelve columns background-color-white-trans">
+              <div class="quote">
+                <div class="quotes-1">&#xf10e;</div>
+                <div class="quotes-2">&#xf10d;</div>
+                <p>
+                  Kakushin's client-centric approach was a breath of fresh air.
+                  They delved into the essence of our brand, engaged with our
+                  vision, and delivered a rebranding that resonates profoundly
+                  with our target audience. Their unwavering support and
+                  insightful suggestions made the process seamless and
+                  rewarding.
+                </p>
+                <h6>Jenifer</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padding-top-bottom">
+            <div class="twelve columns background-color-white-trans">
+              <div class="quote">
+                <div class="quotes-1">&#xf10e;</div>
+                <div class="quotes-2">&#xf10d;</div>
+                <p>
+                  The quality of work delivered by Kakushin was unmatched. Every
+                  design element was meticulously crafted, and the strategic
+                  direction provided was insightful. Their support team was
+                  always on hand to provide guidance, making the rebranding
+                  journey an enlightening experience.
+                </p>
+                <h6>Emma</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padding-top-bottom">
+            <div class="twelve columns background-color-white-trans">
+              <div class="quote">
+                <div class="quotes-1">&#xf10e;</div>
+                <div class="quotes-2">&#xf10d;</div>
+                <p>
+                  Our experience with Kakushin was a testament to their ability
+                  to bridge visions with reality. Their creativity was not just
+                  about aesthetic appeal but about crafting a brand narrative
+                  that speaks volumes. The continual support and
+                  customer-focused approach made us feel valued, and the quality
+                  of the deliverables has set a new benchmark for us.
+                </p>
+                <h6>Antonio</h6>
               </div>
             </div>
           </div>
@@ -769,7 +1170,7 @@
             data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
           >
             <div class="section-title">
-              <h2>Blogs</h2>
+              <h2 style="padding-top: 90px">Blogs</h2>
               <div class="shadow-title">latest news</div>
             </div>
           </div>
@@ -778,19 +1179,20 @@
             data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
           >
             <div class="post background-color-white">
-              <div class="tipe">latest article</div>
-              <img src="images/blog/1.jpg" alt="" />
-              <div class="subtext">
-                08.02.2016. in <a href="#">design</a> by
-                <a href="#">John Doe</a>
-              </div>
-              <a href="post.html"><h6>Day of photography.</h6></a>
+              <div class="tipe">latest blog</div>
+              <img src="images/blog_images/post-1-img.jpg" alt="blog_image_1" />
+
+              <a href="post-1.html"
+                ><h6 class="mt-10">
+                  Designing Your Startup's Visual Identity...
+                </h6></a
+              >
               <p>
-                Donec vel mi sem. Vivamus dapibus rutrum mi ut aliquam. In hac
-                habitasse platea dictumst. Integer sagittis neque a tortor
-                tempor in porta sem vulputate.
+                A visual identity is a significant aspect of your brand's
+                overall identity. It's what makes your startup immediately
+                recognizable to your audience...
               </p>
-              <a href="post.html"><div class="arrow-right-post"></div></a>
+              <a href="post-1.html"><div class="arrow-right-post"></div></a>
             </div>
           </div>
           <div
@@ -798,19 +1200,15 @@
             data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
           >
             <div class="post background-color-white">
-              <div class="tipe">most commented</div>
-              <img src="images/blog/2.jpg" alt="" />
-              <div class="subtext">
-                29.01.2016. in <a href="#">design</a> by
-                <a href="#">John Doe</a>
-              </div>
-              <a href="post.html"><h6>The hidden entry.</h6></a>
+              <div class="tipe">blog</div>
+              <img src="images/blog_images/post-2-img.jpg" alt="" />
+
+              <a href="post-2.html"><h6>Effective Brand Messaging.</h6></a>
               <p>
-                Donec vel mi sem. Vivamus dapibus rutrum mi ut aliquam. In hac
-                habitasse platea dictumst. Integer sagittis neque a tortor
-                tempor in porta sem vulputate.
+                Brand messaging plays a pivotal role in communicating who you
+                are, what you offer, and why it matters to your audience...
               </p>
-              <a href="post.html"><div class="arrow-right-post"></div></a>
+              <a href="post-2.html"><div class="arrow-right-post"></div></a>
             </div>
           </div>
           <div class="clear"></div>
@@ -819,19 +1217,17 @@
             data-scroll-reveal="enter left move 100px over 1s after 0.7s"
           >
             <div class="post background-color-white">
-              <div class="tipe">image</div>
-              <img src="images/blog/3.jpg" alt="" />
-              <div class="subtext">
-                21.01.2016. in <a href="#">design</a> by
-                <a href="#">John Doe</a>
-              </div>
-              <a href="post.html"><h6>Blown leaves.</h6></a>
+              <div class="tipe">blog</div>
+              <img src="images/blog_images/post-3-img.jpg" alt="" />
+
+              <a href="post-3.html"
+                ><h6>Building Startup Online Presence.</h6></a
+              >
               <p>
-                Donec vel mi sem. Vivamus dapibus rutrum mi ut aliquam. In hac
-                habitasse platea dictumst. Integer sagittis neque a tortor
-                tempor in.
+                In today's digital world, building an online presence for your
+                startup is no longer optional – it's a necessity...
               </p>
-              <a href="post.html"><div class="arrow-right-post"></div></a>
+              <a href="post-3.html"><div class="arrow-right-post"></div></a>
             </div>
           </div>
           <div
@@ -839,29 +1235,22 @@
             data-scroll-reveal="enter left move 100px over 1s after 0.4s"
           >
             <div class="post background-color-white">
-              <div class="tipe">slider</div>
+              <div class="tipe">blog</div>
               <div id="owl-post" class="owl-carousel owl-theme">
                 <div class="item">
-                  <img src="images/blog/4.jpg" alt="" />
-                </div>
-                <div class="item">
-                  <img src="images/blog/5.jpg" alt="" />
-                </div>
-                <div class="item">
-                  <img src="images/blog/6.jpg" alt="" />
+                  <img src="images/blog_images/post-4-img.jpg" alt="" />
                 </div>
               </div>
-              <div class="subtext">
-                17.01.2016. in <a href="#">design</a> by
-                <a href="#">John Doe</a>
-              </div>
-              <a href="post.html"><h6>Moments from a life.</h6></a>
+
+              <a href="post-4.html"
+                ><h6>Make your startup brand stand out.</h6></a
+              >
               <p>
-                Donec vel mi sem. Vivamus dapibus rutrum mi ut aliquam. In hac
-                habitasse platea dictumst. Integer sagittis neque a tortor
-                tempor in.
+                In the sea of startups, how do you make yours stand out? The
+                answer lies in creative branding. A creative branding strategy
+                not only differentiates you from the competition...
               </p>
-              <a href="post.html"><div class="arrow-right-post"></div></a>
+              <a href="post-4.html"><div class="arrow-right-post"></div></a>
             </div>
           </div>
           <div
@@ -869,23 +1258,20 @@
             data-scroll-reveal="enter left move 100px over 1s after 0.1s"
           >
             <div class="post background-color-white">
-              <div class="tipe">video</div>
+              <div class="tipe">blog</div>
               <figure class="vimeo">
                 <a href="http://player.vimeo.com/video/153959792">
-                  <img src="images/blog/vimeo-1.jpg" alt="image" />
+                  <img src="images/blog_images/post-5-img.jpg" alt="image" />
                 </a>
               </figure>
-              <div class="subtext">
-                11.01.2016. in <a href="#">design</a> by
-                <a href="#">John Doe</a>
-              </div>
-              <a href="post.html"><h6>Mini icy rocky waves.</h6></a>
+
+              <a href="post-5.html"><h6>Crisis to Calm</h6></a>
               <p>
-                Donec vel mi sem. Vivamus dapibus rutrum mi ut aliquam. In hac
-                habitasse platea dictumst. Integer sagittis neque a tortor
-                tempor in.
+                In the world of startups, where competition is fierce, and every
+                decision can make or break your business, reputation management
+                is crucial...
               </p>
-              <a href="post.html"><div class="arrow-right-post"></div></a>
+              <a href="post-5.html"><div class="arrow-right-post"></div></a>
             </div>
           </div>
           <div class="clear"></div>
@@ -895,7 +1281,7 @@
           >
             <a href="blog.html">
               <div class="post all-news-link background-color-white">
-                <h6>check all latest news</h6>
+                <h6>check all latest blogs</h6>
                 <div class="tipe">all blog posts</div>
               </div>
             </a>
@@ -908,52 +1294,56 @@
     ================================================== -->
 
     <div class="section sep-3-background padding-top-bottom">
-      <div class="container">
+      <div class="fourBoxContainer">
         <div
-          class="three columns"
+          class="fourBox"
           data-scroll-reveal="enter left move 100px over 1s after 1s"
         >
           <div class="counters background-color-white-trans">
             <div class="coun-num">
               <span class="counter-jquery-start">37</span>
             </div>
-            <h6><span>&#xf1de;</span> theme options</h6>
+            <h6><span>&#xf1de;</span> full branding</h6>
             <p>Limitless options.</p>
           </div>
         </div>
+
         <div
-          class="three columns"
+          class="fourBox"
           data-scroll-reveal="enter left move 100px over 1s after 0.7s"
         >
           <div class="counters background-color-white-trans">
             <div class="coun-num">
-              <span class="counter-jquery-start">97</span>
+              <span class="counter-jquery-start">4</span>
             </div>
-            <h6><span>&#xf121;</span> lines of code</h6>
+            <h6><span>&#xf121;</span> unique algorithms</h6>
             <p>Carefully typed.</p>
           </div>
         </div>
+
         <div
-          class="three columns"
+          class="fourBox"
           data-scroll-reveal="enter left move 100px over 1s after 0.4s"
         >
           <div class="counters background-color-white-trans">
             <div class="coun-num">
-              <span class="counter-jquery-start">42</span>
+              <span class="counter-jquery-start">120</span>
             </div>
-            <h6><span>&#xf0f4;</span> cups of coffee</h6>
-            <p>Always concentrated.</p>
+
+            <h6><span>&#xf0f4;</span> websites</h6>
+            <p>Always working.</p>
           </div>
         </div>
+
         <div
-          class="three columns"
+          class="fourBox"
           data-scroll-reveal="enter left move 100px over 1s after 0.1s"
         >
           <div class="counters background-color-white-trans">
             <div class="coun-num">
-              <span class="counter-jquery-start">25</span>
+              <span class="counter-jquery-start">87</span>
             </div>
-            <h6><span>&#xf091;</span> awards received</h6>
+            <h6><span>&#xf091;</span> marketing campaigns</h6>
             <p>Our achievements.</p>
           </div>
         </div>
@@ -975,12 +1365,7 @@
               <div class="shadow-title">get in touch</div>
             </div>
           </div>
-          <form
-            name="ajax-form"
-            id="ajax-form"
-            action="mail-it.php"
-            method="post"
-          >
+          <form name="ajax-form" id="ajax-form" onsubmit="sendEmailContactus(event)">
             <div
               class="six columns"
               data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
@@ -989,8 +1374,9 @@
                 <span class="error" id="err-name">please enter name</span>
               </label>
               <input
+                required
                 name="name"
-                id="name"
+                id="sendername_contactus"
                 type="text"
                 placeholder="Your Name: *"
               />
@@ -999,15 +1385,10 @@
               class="six columns"
               data-scroll-reveal="enter bottom move 100px over 1s after 0.1s"
             >
-              <label for="email">
-                <span class="error" id="err-email">please enter e-mail</span>
-                <span class="error" id="err-emailvld"
-                  >e-mail is not a valid format</span
-                >
-              </label>
               <input
+                required
                 name="email"
-                id="email"
+                id="senderemail_contactus"
                 type="text"
                 placeholder="E-Mail: *"
               />
@@ -1018,8 +1399,9 @@
             >
               <label for="message"></label>
               <textarea
+                required
                 name="message"
-                id="message"
+                id="message_contactus"
                 placeholder="Tell Us Everything"
               ></textarea>
             </div>
@@ -1030,21 +1412,16 @@
               <div id="button-con">
                 <button
                   class="send_message button-effect button--moema button--text-thick button--text-upper button--size-s"
-                  id="send"
+                  id="contact-send" type="submit"
                   data-lang="en"
+                  type="submit"
+                  
                 >
-                  submit
+                  send
                 </button>
               </div>
             </div>
             <div class="clear"></div>
-            <div class="error text-align-center" id="err-form">
-              There was a problem validating the form please check!
-            </div>
-            <div class="error text-align-center" id="err-timedout">
-              The connection to the server timed out!
-            </div>
-            <div class="error" id="err-state"></div>
           </form>
 
           <div class="clear"></div>
@@ -1061,7 +1438,7 @@
             <div class="con-details">
               <div class="icon">&#xf041;</div>
               <h6>Visit Us</h6>
-              <p>Manhattan - 10036 NY</p>
+              <p>LondonUK</p>
             </div>
           </div>
           <div
@@ -1071,7 +1448,7 @@
             <div class="con-details">
               <div class="icon">&#xf095;</div>
               <h6>Call Us</h6>
-              <p>+323 432347575</p>
+              <p>+30 6982330367</p>
             </div>
           </div>
           <div
@@ -1081,16 +1458,10 @@
             <div class="con-details">
               <div class="icon">&#xf0e0;</div>
               <h6>Mail Us</h6>
-              <p>office@eleos.com</p>
+              <p>iokakushin@gmail.com</p>
             </div>
           </div>
         </div>
-      </div>
-      <div id="cd-google-map">
-        <div id="google-container"></div>
-        <div id="cd-zoom-in"></div>
-        <div id="cd-zoom-out"></div>
-        <address>Manhattan - 10036 NY</address>
       </div>
     </div>
 
@@ -1103,20 +1474,15 @@
       <div class="container">
         <div class="twelve columns">
           <div class="footer">
-            <a href="#" class="social-icon"
-              ><div class="icons twitter">&#xf099;</div></a
-            >
-            <a href="#" class="social-icon"
-              ><div class="icons dribbble">&#xf17d;</div></a
-            >
-            <a href="#" class="social-icon"
+            <a
+              href="https://www.facebook.com/profile.php?id=100087154231923"
+              class="social-icon"
               ><div class="icons facebook">&#xf09a;</div></a
             >
-            <a href="#" class="social-icon"
+            <a
+              href="https://www.linkedin.com/company/86423797"
+              class="social-icon"
               ><div class="icons linkedin">&#xf0e1;</div></a
-            >
-            <a href="#" class="social-icon"
-              ><div class="icons vimeo">&#xf27d;</div></a
             >
           </div>
         </div>
@@ -1126,9 +1492,9 @@
       <div class="container">
         <div class="twelve columns">
           <div class="footer-down">
-            <p>©Eleos by IG Design - 2016 - ELITE AUTHOR</p>
+            <p>©Kakushin by Kakushin Team- 2022</p>
             <p>
-              Made with<span>&#xf004;</span>and<span>&#xf0f4;</span>in Serbia
+              Made with<span>&#xf004;</span>and<span>&#xf0f4;</span>in London
             </p>
           </div>
         </div>
@@ -1141,6 +1507,7 @@
     ================================================== -->
     <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="js/royal_preloader.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript">
       (function ($) {
         "use strict";
@@ -1154,11 +1521,7 @@
         });
       })(jQuery);
     </script>
-
-<script type="text/javascript" src="index.js">
-
-</script>
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
@@ -1168,18 +1531,154 @@
         window.scrollReveal = new scrollReveal();
       })(jQuery);
     </script>
+
+<script>
+  // Initialize emailjs - put this outside of the sendEmail function
+  // so it is only initialized once
+  (function() {
+    emailjs.init("RkNjR8iJGnI6Yq6YV");
+  })();
+
+  // Healtcheck function
+  function sendEmail(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  var selectedOption = document.getElementById('message-dropdown').value;
+  var messageValue = document.querySelector("#message").value;
+  var senderNameValue = document.querySelector("#sendername").value;
+
+  // Check if the dropdown is present and the selected option is calendly
+  if (selectedOption === "calendly30min") {
+    window.open("https://calendly.com/kakushin/30min", "_blank");
+  } else if (selectedOption === "calendly1hour") {
+    window.open("https://calendly.com/kakushin/healthcheck-1-hour-consulation-meeting", "_blank");
+  } else {
+    // Continue with the email sending process
+    var params = {
+      from_name: senderNameValue,
+      email_id: document.querySelector("#senderemail").value,
+      message: messageValue
+    };
+
+    var serviceID = "service_nu1ibmm";
+    var templateID = "template_cyqgppg";
+
+    emailjs.send(serviceID, templateID, params)
+      .then((res) => {
+        // Show thank you alert only if the selected option is "Receive Results via Email"
+        if (selectedOption === "Receive Results via Email") {
+          alert("Thank you for taking the first step towards a healthier brand! We'll send your results shortly!");
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to send email. Error: " + error);
+        // Optionally handle the error in the UI, without an alert
+      });
+  }
+}
+
+
+// Contactus function
+function sendEmailContactus(event) {
+  event.preventDefault(); // This will prevent the default form submission
+
+
+  var params = {
+    from_name: document.querySelector("#sendername_contactus").value,
+    email_id: document.querySelector("#senderemail_contactus").value,
+    message: document.querySelector("#message_contactus").value,
+  };
+
+  var serviceID = "service_nu1ibmm";
+  var templateID = "template_cyqgppg";
+
+  emailjs.send(serviceID, templateID, params)
+    .then((res) => {
+      alert("Email sent successfully!");
+    })
+    .catch((error) => {
+      alert("Failed to send email. Error: " + error);
+    });
+}
+  
+let previewContainer = document.querySelector(".products-preview");
+  let previewBoxes = previewContainer.querySelectorAll(".preview");
+  let activePreview = null;
+
+  document
+    .querySelectorAll(".products-container .parent_Box .box .btn")
+    .forEach((product) => {
+      console.log(product);
+      product.onclick = () => {
+        if (activePreview) {
+          activePreview.classList.remove("active");
+          activePreview.style.display = "none"; // Ensure the previous modal content is hidden
+        }
+        previewContainer.style.display = "flex";
+        let name = product.getAttribute("data-name");
+
+        if (!name) {
+          name = "HealthCheck";
+        }
+        previewBoxes.forEach((preview) => {
+          let target = preview.getAttribute("data-target");
+          if (name === target) {
+            preview.classList.add("active");
+            preview.style.display = "block"; // Or "flex" or whatever the default is
+            activePreview = preview;
+          }
+        });
+        document.documentElement.classList.add("no-scroll");
+      };
+    });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get all close icons
+    let closeIcons = document.querySelectorAll(".closeIcon");
+
+    // Add event listener to each close icon
+    closeIcons.forEach(function (icon) {
+      icon.addEventListener("click", function () {
+        // Assuming you want to hide the parent 'preview' div when the close icon is clicked
+        this.closest(".preview").style.display = "none";
+      });
+    });
+  });
+
+  previewBoxes.forEach((preview) => {
+    let closeButton = preview.querySelector(".closeIcon");
+    closeButton.onclick = () => {
+      preview.classList.remove("active");
+      previewContainer.style.display = "none";
+      activePreview = null;
+
+      // Enable body scrolling
+      document.documentElement.classList.remove("no-scroll");
+    };
+  });
+
+  previewContainer.addEventListener("click", (event) => {
+    // Check if the clicked element is the previewContainer itself
+    // (not one of its children). This ensures that clicking on the popup
+    // itself doesn't close it, but clicking outside will.
+    if (event.target === previewContainer) {
+      if (activePreview) {
+        activePreview.classList.remove("active");
+        activePreview = null;
+      }
+      previewContainer.style.display = "none";
+
+      // Enable body scrolling
+      document.documentElement.classList.remove("no-scroll");
+    }
+  });
+</script>
+
+
     <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
     <script type="text/javascript" src="js/portfolio.js"></script>
     <script type="text/javascript" src="js/contact.js"></script>
-    <script
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvpnlHRidMIU374bKM5-sx8ruc01OvDjI"
-    ></script>
-    <!-- ==================
-		Go to this link to activated your google map API KEY https://developers.google.com/maps/documentation/javascript/tutorial#api_key 
-		your key replace in script link for google map after .../maps/api/js?key=HERE_YOUR_API_KEY
-		coordinates for map you can change in custom-gmap.js file 
-	================== -->
+
     <script type="text/javascript" src="js/custom-gmap.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <!-- End Document

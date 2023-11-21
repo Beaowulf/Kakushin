@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/check-website-health",
+        "methods": ["POST"],
+        "dest": "/api/server.js"
+      }
+    ]
+  }
+  
