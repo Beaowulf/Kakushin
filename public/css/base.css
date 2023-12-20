@@ -523,6 +523,21 @@ input::-moz-focus-inner {
 .text_bold {
   font-weight: bold;
 }
+.title_top{
+  width: 140ch;
+}
+.big_text_b{
+  font-weight: semi-bold;
+  line-height: 1.25;
+  font-size: 32px;
+}
+.big_gray_text{
+  font-size: 42px;
+  color: gray;
+  font-weight: 600;
+}
+
+
 .box {
   width: 33.5rem;
   height: 50rem;

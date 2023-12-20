@@ -3273,10 +3273,11 @@ figure.youtube a img {
   width: 100%;
 }
 .logo-footer-background {
-  background-image: url("../images/logo-footer.png");
+  background-image: url("../images/logo-footer-white.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 441px 80px;
+  padding-top: 80px;
 }
 .footer a.social-icon {
   display: inline-block;
