@@ -22,6 +22,13 @@
 
 /* #Reset & Basics (Inspired by E. Meyers)
 ================================================== */
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+
 .hidden{
   display: none;
 }
@@ -536,11 +543,16 @@ input::-moz-focus-inner {
   color: gray;
   font-weight: 600;
 }
-
+.box_strong{
+  font-weight: 600;
+}
+.box_text_wrapper{
+  text-align: left;
+  margin: 20px 22px;
+}
 
 .box {
-  width: 33.5rem;
-  height: 50rem;
+
   margin: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -570,7 +582,7 @@ input::-moz-focus-inner {
 }
 
 .box h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin: 1rem 0;
 }
 
@@ -607,7 +619,9 @@ input::-moz-focus-inner {
 .p_box {
   color: rgb(58, 58, 58);
   text-align: left;
+
 }
+
 
 .white_text {
   color: white;
@@ -964,4 +978,52 @@ body {
   #message{
     width: 100% !important;
   }
+}
+
+
+
+/* Carousel */
+.glide{
+  margin: 0 auto;
+  padding: 5rem;
+}
+.box_parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+.glide__arrows{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+}
+.glide__arrow{
+  width: 150px;
+}
+
+
+.box_title{
+  font-size: 24px;
+  height: 7.5rem;
+}
+
+.btn_launch{
+  height: 3.5rem;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfa144;
+  border-radius: 10px;
+  margin-top: 4rem;
+}
+
+.btn_launch a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  font-weight: 600;
 }
