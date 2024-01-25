@@ -552,7 +552,8 @@ input::-moz-focus-inner {
 }
 
 .box {
-
+  width: 35rem;
+  height: 40rem;
   margin: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
