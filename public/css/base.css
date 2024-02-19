@@ -552,13 +552,14 @@ input::-moz-focus-inner {
 }
 
 .box {
-  width: 35rem;
-  height: 40rem;
+  width: 37.5rem;
+  height: 55rem;
   margin: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+
   backdrop-filter: blur(2px); /* Adjust the blur amount as needed */
   background-color: rgba(
     255,
@@ -629,6 +630,7 @@ input::-moz-focus-inner {
   width: 90%;
   margin: auto;
   font-weight: 400;
+  padding-bottom: 40px;
 }
 
 .services_section {
