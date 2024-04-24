@@ -3462,6 +3462,17 @@ figure.youtube a img {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+  .logo-footer-background {
+    background-size: 280px 65px;
+    padding-top: 20px;
+  }
+  #owl-sep-2.owl-theme .owl-controls .owl-buttons .owl-prev {
+    margin-top: 0 !important;
+    top: 90% !important;
+  }
+  #owl-sep-2.owl-theme .owl-controls .owl-buttons .owl-next {
+    top: 60px !important;
+  }
 }
 
 @media only screen and (max-width: 319px) {
