@@ -1649,13 +1649,11 @@ if (typeof Object.create !== "function") {
         o = Math.abs(e.positionsInArray[e.currentItem]) + e.itemWidth / 2,
         u = "webkitAnimationEnd oAnimationEnd MSAnimationEnd animationend";
       e.isTransition = true;
-      e.$owlWrapper
-        .addClass("owl-origin")
-        .css({
-          "-webkit-transform-origin": o + "px",
-          "-moz-perspective-origin": o + "px",
-          "perspective-origin": o + "px",
-        });
+      e.$owlWrapper.addClass("owl-origin").css({
+        "-webkit-transform-origin": o + "px",
+        "-moz-perspective-origin": o + "px",
+        "perspective-origin": o + "px",
+      });
       i.css(a(s, 10))
         .addClass(t)
         .on(u, function () {

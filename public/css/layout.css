@@ -1022,8 +1022,8 @@ video#video_background {
 .team-box-1 ul {
   position: absolute;
   z-index: 3;
-  top: -30px;
-  margin-top: -48px;
+  top: -80px;
+  margin-top: -30px;
   width: 100%;
   left: 0;
   text-align: center;
@@ -1318,7 +1318,6 @@ video#video_background {
   text-align: center;
   font-weight: 400;
   font-style: italic;
-  padding-top: 5px;
   font-size: 13px;
   letter-spacing: 2px;
 }
@@ -2981,7 +2980,8 @@ figure.youtube a img {
 }
 .text-align-center {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 50px;
+  width: 80%;
 }
 #ajax-form textarea:active,
 #ajax-form input:active {
@@ -3429,6 +3429,10 @@ figure.youtube a img {
   .content-comm img {
     display: none;
   }
+  .padding-top-bottom {
+    padding-top: 1px;
+    padding-bottom: 50px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -3471,7 +3475,7 @@ figure.youtube a img {
     top: 90% !important;
   }
   #owl-sep-2.owl-theme .owl-controls .owl-buttons .owl-next {
-    top: 60px !important;
+    top: 25px !important;
   }
 }
 

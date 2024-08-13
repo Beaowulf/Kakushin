@@ -530,9 +530,10 @@ input::-moz-focus-inner {
 .text_bold {
   font-weight: bold;
 }
-.title_top{
-  width: 140ch;
-}
+
+
+
+
 .big_text_b{
   font-weight: semi-bold;
   line-height: 1.25;
@@ -553,7 +554,7 @@ input::-moz-focus-inner {
 
 .box {
   width: 37.5rem;
-  height: 55rem;
+  height: auto;
   margin: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -630,7 +631,8 @@ input::-moz-focus-inner {
   width: 90%;
   margin: auto;
   font-weight: 400;
-  padding-bottom: 40px;
+  padding-bottom: 14px;
+  font-size: 10px;
 }
 
 .services_section {
@@ -638,7 +640,7 @@ input::-moz-focus-inner {
 }
 
 #about {
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
 .blog_title {
@@ -664,10 +666,11 @@ input::-moz-focus-inner {
     padding: 2rem;
   }
   .box {
-    width: 30rem;
+    width: 100%;
     height: fit-content;
     margin: 1rem;
   }
+  
 }
 
 /* Popup stuff */
@@ -878,6 +881,13 @@ body {
   .products-preview .preview img {
     height: 25rem;
   }
+  .healthcheck_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+}
 }
 
 @media (max-width: 450px) {
@@ -940,7 +950,7 @@ body {
   height: 40px;
   width: fit-content;
   margin-right: 40px;
-  padding: 10px;
+  padding: 10px 15px;
   font-size: 13px;
 
 }
@@ -1030,3 +1040,5 @@ body {
   text-decoration: inherit; /* no underline */
   font-weight: 600;
 }
+
+
