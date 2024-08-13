@@ -359,12 +359,14 @@ var cbpAnimatedHeader = (function () {
       indentChildren: false,
       childrenIndenter: "&nbsp;&nbsp;",
     };
+
   function Plugin(element, options) {
     this.element = element;
     this.$elem = $(this.element);
     this.options = $.extend({}, defaults, options);
     this.init();
   }
+
   Plugin.prototype = {
     init: function () {
       var $options = this.options,
@@ -372,10 +374,15 @@ var cbpAnimatedHeader = (function () {
         $collapser =
           '<div class="menu-collapser">' +
           $options.collapserTitle +
-          '<div class="collapse-button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div></div>',
+          '<div id="nav-icon3">' +
+          "<span></span><span></span><span></span><span></span>" +
+          "</div></div>",
         $menu_collapser;
+
       $menu.before($collapser);
       $menu_collapser = $menu.prev(".menu-collapser");
+
+      // Handle submenu collapsing
       $menu.on("click", ".sub-collapser", function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -394,10 +401,14 @@ var cbpAnimatedHeader = (function () {
             .slideDown($options.animSpeed, $options.easingEffect);
         }
       });
-      $menu_collapser.on("click", ".collapse-button", function (e) {
+
+      // Handle menu collapsing with the new hamburger button
+      $menu_collapser.on("click", "#nav-icon3", function (e) {
         e.preventDefault();
+        $(this).toggleClass("open");
         $menu.slideToggle($options.animSpeed, $options.easingEffect);
       });
+
       this.resizeMenu({ data: { el: this.element, options: this.options } });
       $(window).on(
         "resize",
@@ -405,11 +416,13 @@ var cbpAnimatedHeader = (function () {
         this.resizeMenu
       );
     },
+
     resizeMenu: function (event) {
       var $window = $(window),
         $options = event.data.options,
         $menu = $(event.data.el),
         $menu_collapser = $("body").find(".menu-collapser");
+
       $menu.find("li").each(function () {
         if ($(this).has("ul").length) {
           if ($(this).has(".sub-collapser").length) {
@@ -425,6 +438,7 @@ var cbpAnimatedHeader = (function () {
           .children("i")
           .html("&#9660;");
       });
+
       if ($options.resizeWidth >= $window.width()) {
         if ($options.indentChildren) {
           $menu.find("ul").each(function () {
@@ -461,6 +475,7 @@ var cbpAnimatedHeader = (function () {
         $menu_collapser.hide();
       }
     },
+
     indent: function (num, options) {
       var $indent = "";
       for (var i = 0; i < num; i++) {
@@ -469,6 +484,7 @@ var cbpAnimatedHeader = (function () {
       return "<i>" + $indent + "</i>";
     },
   };
+
   $.fn[pluginName] = function (options) {
     return this.each(function () {
       if (!$.data(this, "plugin_" + pluginName)) {
@@ -477,7 +493,6 @@ var cbpAnimatedHeader = (function () {
     });
   };
 })(jQuery, window, document);
-
 /**
 Owl Carousel
  */

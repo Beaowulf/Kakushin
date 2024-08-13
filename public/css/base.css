@@ -546,6 +546,7 @@ input::-moz-focus-inner {
 }
 .box_strong{
   font-weight: 600;
+  font-size: 14px;
 }
 .box_text_wrapper{
   text-align: left;
@@ -603,8 +604,8 @@ input::-moz-focus-inner {
   margin-bottom: 12px;
 }
 .svg_box_icon {
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
 }
 .parent_h3 {
   width: 100%;
