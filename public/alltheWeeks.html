@@ -21,24 +21,23 @@
 
     <!-- CSS
   ================================================== -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/retina.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.transitions.css" />
+    <link rel="stylesheet" href="css/colorbox.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
 
-  <link
+    <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-<link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/base.css" />
-<link rel="stylesheet" href="css/skeleton.css" />
-<link rel="stylesheet" href="css/layout.css" />
-<link rel="stylesheet" href="css/font-awesome.css" />
-<link rel="stylesheet" href="css/retina.css" />
-<link rel="stylesheet" href="css/owl.carousel.css" />
-<link rel="stylesheet" href="css/owl.transitions.css" />
-<link rel="stylesheet" href="css/colorbox.css" />
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
 />
 
     <!-- Favicons
@@ -398,107 +397,12 @@
       <!-- End of Carousel -->
 
       <div class="products-container">
-
-        <!-- SWIPER FOR WEEKS -->
-        <div class="swiper-parent">
-          <div class="swapper-parent">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <!-- <div class="swiper-slide">
-                  <div class="box_parent">
-                    <h3 class="box_title">
-                      Week 1: Introduction to the Program and Startup Ecosystem
-                    </h3>
-                    <div class="box">
-                      <h3 class="box_heading">Sessions</h3>
-                      <img
-                        class="svg_box_icon"
-                        src="images/svgs/basic.svg"
-                        alt="basic_icon"
-                      />
-                      <div class="session_box_text">
-                        <div class="parent_h3">
-                          <h3 class="h3_box">
-                            Session 1: Program Kick-off and Introduction
-                          </h3>
-                        </div>
-                        <div class="box_text_wrapper">
-                          <p class="product p_box" data-name="p-1">
-                            This session aims to set the stage for the entire program.
-                            It's designed to welcome participants into the accelerator
-                            community, familiarize them with the program structure,
-                            and set clear expectations. The session focuses on
-                            building rapport among participants, introducing the
-                            facilitators and mentors, and establishing a supportive,
-                            collaborative environment conducive to learning and
-                            innovation.
-                          </p>
-                          <br />
-                          <br />
-                          <p>
-                            <span class="box_strong">Outcome:</span> Participants will
-                            understand the program's structure and objectives, and
-                            establish a network with peers and mentors.
-                          </p>
-                          <p>
-                            <span class="box_strong">Debate Topic:</span> "Is the
-                            traditional startup ecosystem still relevant in the era of
-                            digital entrepreneurship?"
-                          </p>
-                          <p>
-                            <span class="box_strong">Case Study:</span> Overview of
-                            Airbnb's rise within the startup ecosystem.
-                          </p>
-                          <p>
-                            <span class="box_strong">Implementation Checklist:</span>
-                            Set personal goals for the program, engage in networking
-                            activities, and familiarize with program resources.
-                          </p>
-                          <p>
-                            <span class="box_strong">Guest Speaker Suggestion:</span>
-                            A successful digital entrepreneur or an expert in startup
-                            ecosystems.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="session_box_text">
-                        <div class="parent_h3">
-                          <h3 class="h3_box">
-                            Session 2: Understanding the Startup Ecosystem
-                          </h3>
-                        </div>
-                        <div class="box_text_wrapper">
-                          <p>
-                            <span class="box_strong">Outcome:</span> Comprehensive
-                            understanding of global and local startup ecosystems, and
-                            how they impact business growth.
-                          </p>
-                          <p>
-                            <span class="box_strong">Debate Topic:</span> "Global vs.
-                            Local Startup Ecosystems: Which is more crucial for
-                            startup success?"
-                          </p>
-                          <p>
-                            <span class="box_strong">Case Study:</span> Analysis of
-                            Silicon Valley's ecosystem model.
-                          </p>
-                          <p>
-                            <span class="box_strong">Implementation Checklist:</span>
-                            Identify key players in your local ecosystem, attend local
-                            startup events, and engage with local incubators.
-                          </p>
-                          <p>
-                            <span class="box_strong">Guest Speaker Suggestion:</span>
-                            An analyst or journalist specializing in global startup
-                            trends.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-                <div class="swiper-slide">
-                  <div class="box_parent">
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <!-- Week 1 -->
+                <div class="box_parent">
                   <h3 class="box_title">Week 1: Introduction to the Program and Startup Ecosystem</h3>
                   <div class="box">
                     <h3 class="box_heading">Sessions
@@ -536,8 +440,10 @@
                     </div>
 
                   </div>
-                </div></div>
-                <div class="swiper-slide"> <!-- Week 2 -->
+                </div>
+              </li>
+              <li class="glide__slide">
+                <!-- Week 2 -->
                   <div class="box_parent">
                   <h3 class="box_title">Week 2: Idea Validation and Market Research
                   </h3>
@@ -575,8 +481,10 @@
                     </div>
 
                   </div>
-                </div></div>
-                <div class="swiper-slide"><!-- Week 3 -->
+                </div>
+              </li>
+              <li class="glide__slide">
+                <!-- Week 3 -->
                   <div class="box_parent">
                   <h3 class="box_title">Week 3: Business Models and Planning
                   </h3>
@@ -614,8 +522,10 @@
                     </div>
 
                   </div>
-                </div></div>
-                <div class="swiper-slide"><!-- Week 4 -->
+                </div>
+              </li>
+              <li class="glide__slide">
+                <!-- Week 4 -->
                   <div class="box_parent">
                   <h3 class="box_title">Week 4: Product Development and Tech Trends
                   </h3>
@@ -653,8 +563,10 @@
                     </div>
 
                   </div>
-                </div></div>
-                <div class="swiper-slide"><!-- Week 5 -->
+                </div>
+              </li>
+              <li class="glide__slide">
+                <!-- Week 5 -->
                   <div class="box_parent">
                   <h3 class="box_title">Week 5: Marketing Strategies and Digital Trends
                   </h3>
@@ -692,216 +604,234 @@
                     </div>
 
                   </div>
-                </div></div>
-                <div class="swiper-slide"><!-- Week 6 -->
-                  <div class="box_parent">
-                    <h3 class="box_title">Week 6: Sales Strategies and Growth
+                </div>
+              </li>
+              <li class="glide__slide">
+                <!-- Week 6 -->
+                <div class="box_parent">
+                  <h3 class="box_title">Week 6: Sales Strategies and Growth
+                  </h3>
+                  <div class="box">
+                    <h3 class="box_heading">Sessions
                     </h3>
-                    <div class="box">
-                      <h3 class="box_heading">Sessions
-                      </h3>
-                      <img
-                        class="svg_box_icon"
-                        src="images/svgs/basic.svg"
-                        alt="basic_icon"
-                      />
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">Session 1: Effective Sales Techniques for Startups
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> Mastery of sales techniques that are effective in the startup environment, including building sales funnels and customer relationship management.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "Solution Selling vs. Product Selling: What's more effective in the startup world?"</p>
-                          <p><span class="box_strong">Case Study:</span> Salesforce's approach to solution selling.</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Develop a sales strategy, practice sales pitches, and analyze sales data for improvement.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> A seasoned sales director from a successful startup.</p>
-                          
-                        </div>
+                    <img
+                      class="svg_box_icon"
+                      src="images/svgs/basic.svg"
+                      alt="basic_icon"
+                    />
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">Session 1: Effective Sales Techniques for Startups
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> Mastery of sales techniques that are effective in the startup environment, including building sales funnels and customer relationship management.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "Solution Selling vs. Product Selling: What's more effective in the startup world?"</p>
+                        <p><span class="box_strong">Case Study:</span> Salesforce's approach to solution selling.</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Develop a sales strategy, practice sales pitches, and analyze sales data for improvement.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> A seasoned sales director from a successful startup.</p>
+                        
                       </div>
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">Session 2: Growth Hacking and AI
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> Understanding of growth hacking techniques and how AI can be used to drive startup growth.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "Growth Hacking: Ingenious Innovation or Overhyped Buzzword?"</p>
-                          <p><span class="box_strong">Case Study:</span> LinkedIn's use of network effects and AI for growth.</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Identify potential growth hacks, implement AI tools for growth analysis, and track growth metrics.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> A growth hacking expert or a founder who has successfully implemented growth strategies.</p>
-                        </div>
-                      </div>
-  
                     </div>
-                  </div></div>
-                <div class="swiper-slide"><!-- Week 7 -->
-                  <div class="box_parent">
-                    <h3 class="box_title">Week 7: Financial Management and Fintech
-  
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">Session 2: Growth Hacking and AI
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> Understanding of growth hacking techniques and how AI can be used to drive startup growth.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "Growth Hacking: Ingenious Innovation or Overhyped Buzzword?"</p>
+                        <p><span class="box_strong">Case Study:</span> LinkedIn's use of network effects and AI for growth.</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Identify potential growth hacks, implement AI tools for growth analysis, and track growth metrics.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> A growth hacking expert or a founder who has successfully implemented growth strategies.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <!-- Week 7 -->
+                <div class="box_parent">
+                  <h3 class="box_title">Week 7: Financial Management and Fintech
+
+                  </h3>
+                  <div class="box">
+                    <h3 class="box_heading">Sessions
                     </h3>
-                    <div class="box">
-                      <h3 class="box_heading">Sessions
-                      </h3>
-                      <img
-                        class="svg_box_icon"
-                        src="images/svgs/basic.svg"
-                        alt="basic_icon"
-                      />
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">Session 1: Finance Fundamentals for Entrepreneurs
-  
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> Participants will gain a clear understanding of essential financial concepts, budgeting, and financial planning crucial for startup sustainability.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "Bootstrapping vs. Seeking External Funding: What's the best financial approach for startups?"</p>
-                          <p><span class="box_strong">Case Study:</span> Stripe's financial management strategies as a fintech startup.</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Analyze your startup's financial health, create a budget plan, and understand key financial metrics.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> A financial advisor or CFO from a successful startup.</p>
-                          
-                          
-                        </div>
+                    <img
+                      class="svg_box_icon"
+                      src="images/svgs/basic.svg"
+                      alt="basic_icon"
+                    />
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">Session 1: Finance Fundamentals for Entrepreneurs
+
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> Participants will gain a clear understanding of essential financial concepts, budgeting, and financial planning crucial for startup sustainability.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "Bootstrapping vs. Seeking External Funding: What's the best financial approach for startups?"</p>
+                        <p><span class="box_strong">Case Study:</span> Stripe's financial management strategies as a fintech startup.</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Analyze your startup's financial health, create a budget plan, and understand key financial metrics.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> A financial advisor or CFO from a successful startup.</p>
+                        
+                        
                       </div>
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">Session 2: Fintech and AI in Finance
-  
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> Insight into the role of fintech and AI in transforming financial services and how startups can benefit from these technologies.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "Fintech Revolution: Disruption or Evolution in the Financial Industry?"</p>
-                          <p><span class="box_strong">Case Study:</span> The rise and impact of robo-advisors in personal finance.</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Explore fintech solutions for your startup, consider implementing AI in your financial processes, and stay updated on fintech trends.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> A fintech entrepreneur or an AI in finance expert.</p>
-                          
-                        </div>
-                      </div>
-  
                     </div>
-                  </div></div>
-                <div class="swiper-slide"> <!-- Week 8 -->
-                  <div class="box_parent">
-                    <h3 class="box_title">Week 8: Legal Aspects and Intellectual Property
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">Session 2: Fintech and AI in Finance
+
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> Insight into the role of fintech and AI in transforming financial services and how startups can benefit from these technologies.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "Fintech Revolution: Disruption or Evolution in the Financial Industry?"</p>
+                        <p><span class="box_strong">Case Study:</span> The rise and impact of robo-advisors in personal finance.</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Explore fintech solutions for your startup, consider implementing AI in your financial processes, and stay updated on fintech trends.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> A fintech entrepreneur or an AI in finance expert.</p>
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <!-- Week 8 -->
+                <div class="box_parent">
+                  <h3 class="box_title">Week 8: Legal Aspects and Intellectual Property
+                  </h3>
+                  <div class="box">
+                    <h3 class="box_heading">Sessions
                     </h3>
-                    <div class="box">
-                      <h3 class="box_heading">Sessions
-                      </h3>
-                      <img
-                        class="svg_box_icon"
-                        src="images/svgs/basic.svg"
-                        alt="basic_icon"
-                      />
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">Session 1: Legal Basics for Startups
-  
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> A solid understanding of legal challenges and necessities, including company formation, IP rights, and compliance.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "Intellectual Property in Startups: Essential Asset or Unnecessary Burden?"</p>
-                          <p><span class="box_strong">Case Study:</span> Facebook's early legal challenges and learnings.</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Ensure legal compliance, protect intellectual property, and understand the legalities of fundraising.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> A startup-focused legal advisor or IP attorney.</p>
-                          
-                        </div>
+                    <img
+                      class="svg_box_icon"
+                      src="images/svgs/basic.svg"
+                      alt="basic_icon"
+                    />
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">Session 1: Legal Basics for Startups
+
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> A solid understanding of legal challenges and necessities, including company formation, IP rights, and compliance.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "Intellectual Property in Startups: Essential Asset or Unnecessary Burden?"</p>
+                        <p><span class="box_strong">Case Study:</span> Facebook's early legal challenges and learnings.</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Ensure legal compliance, protect intellectual property, and understand the legalities of fundraising.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> A startup-focused legal advisor or IP attorney.</p>
+                        
                       </div>
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">Session 2: Technology Compliance and Legal Tech Tools
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> Knowledge of tech compliance issues and how legal tech tools can aid in managing legal processes efficiently.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "The Impact of GDPR on Global Tech Startups: Barrier or Benefit?"</p>
-                          <p><span class="box_strong">Case Study:</span> A tech startup's journey through GDPR compliance.</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Adopt legal tech tools, stay informed about compliance in tech, and prioritize data security.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> A legal tech expert or a compliance officer.</p>
-                          
-                        </div>
-                      </div>
-  
                     </div>
-                  </div></div>
-                <div class="swiper-slide"><!-- Week 9 -->
-                  <div class="box_parent">
-                    <h3 class="box_title">Week 9: Pitching and Investor Relations
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">Session 2: Technology Compliance and Legal Tech Tools
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> Knowledge of tech compliance issues and how legal tech tools can aid in managing legal processes efficiently.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "The Impact of GDPR on Global Tech Startups: Barrier or Benefit?"</p>
+                        <p><span class="box_strong">Case Study:</span> A tech startup's journey through GDPR compliance.</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Adopt legal tech tools, stay informed about compliance in tech, and prioritize data security.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> A legal tech expert or a compliance officer.</p>
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <!-- Week 9 -->
+                <div class="box_parent">
+                  <h3 class="box_title">Week 9: Pitching and Investor Relations
+                  </h3>
+                  <div class="box">
+                    <h3 class="box_heading">Sessions
                     </h3>
-                    <div class="box">
-                      <h3 class="box_heading">Sessions
-                      </h3>
-                      <img
-                        class="svg_box_icon"
-                        src="images/svgs/basic.svg"
-                        alt="basic_icon"
-                      />
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">Session 1: The Art of Pitching
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> Mastery in creating and delivering compelling pitches that effectively communicate a startup's value proposition to investors.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "The Perfect Pitch: Artistic Storytelling or Data-Driven Presentation?"</p>
-                          <p><span class="box_strong">Case Study:</span> Analysis of a successful pitch from "Shark Tank" or "Dragon’s Den."</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Develop and refine your pitch, practice in various settings, and seek feedback for improvement.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> An experienced investor or a pitching coach.</p>
-                          
-                        </div>
+                    <img
+                      class="svg_box_icon"
+                      src="images/svgs/basic.svg"
+                      alt="basic_icon"
+                    />
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">Session 1: The Art of Pitching
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> Mastery in creating and delivering compelling pitches that effectively communicate a startup's value proposition to investors.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "The Perfect Pitch: Artistic Storytelling or Data-Driven Presentation?"</p>
+                        <p><span class="box_strong">Case Study:</span> Analysis of a successful pitch from "Shark Tank" or "Dragon’s Den."</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Develop and refine your pitch, practice in various settings, and seek feedback for improvement.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> An experienced investor or a pitching coach.</p>
+                        
                       </div>
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">Session 2: Preparing for Investor Meetings
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> Preparedness for successful investor meetings, including understanding investor expectations and negotiation skills.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "The Investor-Startup Relationship: Partnership or Power Play?"</p>
-                          <p><span class="box_strong">Case Study:</span> Uber's Series B funding round and key takeaways.</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Research potential investors, create investor-specific presentations, and practice negotiation strategies.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> A venture capitalist or angel investor.</p>
-                          
-                        </div>
-                      </div>
-  
                     </div>
-                  </div></div>
-                <div class="swiper-slide"><!-- Week 10 -->
-                  <div class="box_parent">
-                    <h3 class="box_title">Week 10: Demo Day and Program Conclusion
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">Session 2: Preparing for Investor Meetings
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> Preparedness for successful investor meetings, including understanding investor expectations and negotiation skills.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "The Investor-Startup Relationship: Partnership or Power Play?"</p>
+                        <p><span class="box_strong">Case Study:</span> Uber's Series B funding round and key takeaways.</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Research potential investors, create investor-specific presentations, and practice negotiation strategies.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> A venture capitalist or angel investor.</p>
+                        
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <!-- Week 10 -->
+                <div class="box_parent">
+                  <h3 class="box_title">Week 10: Demo Day and Program Conclusion
+                  </h3>
+                  <div class="box">
+                    <h3 class="box_heading">Sessions
                     </h3>
-                    <div class="box">
-                      <h3 class="box_heading">Sessions
-                      </h3>
-                      <img
-                        class="svg_box_icon"
-                        src="images/svgs/basic.svg"
-                        alt="basic_icon"
-                      />
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">Session 1: Final Preparations for Demo Day
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> Final refinement and rehearsal of pitches, ensuring readiness to present to investors and stakeholders.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "The Importance of Demo Days in a Startup's Journey: Showcase or Showdown?"</p>
-                          <p><span class="box_strong">Case Study:</span> A retrospective look at a successful startup launch from a past Demo Day.</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Polish your pitch, prepare all presentation materials, and conduct final rehearsals.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> A successful entrepreneur who excelled at a similar Demo Day event.</p>
-                          
-                        </div>
+                    <img
+                      class="svg_box_icon"
+                      src="images/svgs/basic.svg"
+                      alt="basic_icon"
+                    />
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">Session 1: Final Preparations for Demo Day
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> Final refinement and rehearsal of pitches, ensuring readiness to present to investors and stakeholders.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "The Importance of Demo Days in a Startup's Journey: Showcase or Showdown?"</p>
+                        <p><span class="box_strong">Case Study:</span> A retrospective look at a successful startup launch from a past Demo Day.</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Polish your pitch, prepare all presentation materials, and conduct final rehearsals.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> A successful entrepreneur who excelled at a similar Demo Day event.</p>
+                        
                       </div>
-                      <div class="session_box_text">
-                        <div class="parent_h3"><h3 class="h3_box">SSession 2: Demo Day
-                        </h3></div>
-                        <div class="box_text_wrapper">
-                          <p><span class="box_strong">Outcome:</span> Real-world experience of presenting to a panel of potential investors and experts, with a competitive edge for the best pitch deck.</p>
-                          <p><span class="box_strong">Debate Topic:</span> "Is winning a pitch competition indicative of future startup success?"</p>
-                          <p><span class="box_strong">Case Study:</span> A success story of a startup that gained significant traction after winning a pitch competition.</p>
-                          <p><span class="box_strong">Implementation Checklist:</span> Deliver a confident presentation, engage with the audience, and follow up with interested parties post-event.</p>
-                          <p><span class="box_strong">Guest Speaker Suggestion:</span> An influential figure in the startup investment community.</p>
-                          <br>
-                          <p>These detailed elements for each session will ensure a robust, engaging, and practical learning experience, positioning participants for success in their entrepreneurial endeavors.</p>
-                        </div>
-                      </div>
-  
                     </div>
-                  </div></div>
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-pagination"></div>
-            </div>
+                    <div class="session_box_text">
+                      <div class="parent_h3"><h3 class="h3_box">SSession 2: Demo Day
+                      </h3></div>
+                      <div class="box_text_wrapper">
+                        <p><span class="box_strong">Outcome:</span> Real-world experience of presenting to a panel of potential investors and experts, with a competitive edge for the best pitch deck.</p>
+                        <p><span class="box_strong">Debate Topic:</span> "Is winning a pitch competition indicative of future startup success?"</p>
+                        <p><span class="box_strong">Case Study:</span> A success story of a startup that gained significant traction after winning a pitch competition.</p>
+                        <p><span class="box_strong">Implementation Checklist:</span> Deliver a confident presentation, engage with the audience, and follow up with interested parties post-event.</p>
+                        <p><span class="box_strong">Guest Speaker Suggestion:</span> An influential figure in the startup investment community.</p>
+                        <br>
+                        <p>These detailed elements for each session will ensure a robust, engaging, and practical learning experience, positioning participants for success in their entrepreneurial endeavors.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </li>
+
+              <!-- more slides -->
+            </ul>
           </div>
-          
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              Prev
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              Next
+            </button>
+          </div>
         </div>
-        <!-- END OF SWIPER FOR WEEKS -->
+
+
+
           <div class="products-preview">
             <div class="preview" data-target="p-1">
               <img
@@ -1732,83 +1662,9 @@
           background: "#ffffff",
         });
       })(jQuery);
-
-       // swiper js code
-       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          // when window width is >= 320px
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          // when window width is >= 480px
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          // when window width is >= 1420px
-          1420: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-        },
-      });
     </script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-
-       <!-- Swiper JS -->
-       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-       <!-- Initialize Swiper -->
-       <script>
-         var swiper = new Swiper(".mySwiper", {
-           slidesPerView: 3,
-           spaceBetween: 30,
-           loop: true,
-           pagination: {
-             el: ".swiper-pagination",
-             clickable: true,
-           },
-           navigation: {
-             nextEl: ".swiper-button-next",
-             prevEl: ".swiper-button-prev",
-           },
-           breakpoints: {
-             // when window width is >= 320px
-             320: {
-               slidesPerView: 1,
-               spaceBetween: 20,
-             },
-             // when window width is >= 480px
-             480: {
-               slidesPerView: 1,
-               spaceBetween: 20,
-             },
-             // when window width is >= 640px
-             850: {
-               slidesPerView: 2,
-               spaceBetween: 20,
-             },
-           },
-         });
-</script>
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
 
@@ -1965,8 +1821,6 @@
         }
       });
     
-
-     
     </script>
 
     <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>

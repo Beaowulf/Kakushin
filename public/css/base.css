@@ -546,16 +546,19 @@ input::-moz-focus-inner {
 }
 .box_strong{
   font-weight: 600;
+  font-size: 14px;
 }
 .box_text_wrapper{
   text-align: left;
-  margin: 20px 22px;
+  margin: 20px 20px;
+  font-size: 13px;
 }
 
 .box {
-  width: 37.5rem;
+  width: 40rem;
   height: auto;
-  margin: 1rem;
+  /* margin: 1rem; */
+  margin-top: 7rem;
   border: 1px solid #ccc;
   border-radius: 10px;
   text-align: center;
@@ -603,8 +606,8 @@ input::-moz-focus-inner {
   margin-bottom: 12px;
 }
 .svg_box_icon {
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
 }
 .parent_h3 {
   width: 100%;
@@ -622,7 +625,7 @@ input::-moz-focus-inner {
 .p_box {
   color: rgb(58, 58, 58);
   text-align: left;
-
+  font-size: 15px;
 }
 
 
