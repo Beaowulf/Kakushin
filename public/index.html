@@ -44,32 +44,38 @@
   <!-- MENU
     ================================================== -->
 
-  <nav id="menu-wrap" class="menu-back cbp-af-header">
-    <div class="container">
-      <div class="twelve columns">
-        <a href="index.html">
-          <div class="logo"></div>
-        </a>
-        <ul class="slimmenu">
-          <li>
-            <a href="#home">top</a>
-          </li>
-          <li>
-            <a href="#about">about</a>
-          </li>
-          <li>
-            <a href="#work">portfolio</a>
-          </li>
-          <li>
-            <a href="#blog">blogs</a>
-          </li>
-          <li>
-            <a href="contact-us.html">contact us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav id="custom_menu-wrap" class="custom_menu-back cbp-af-header">
+      <header class="custom_header" id="custom_header">
+        <nav class="custom_nav custom_container">
+          <a class="custom_nav__logo" href="#">Logo</a>
+    
+          <div class="custom_nav__menu" id="custom_nav-menu">
+            <ul class="custom_nav__list">
+              <li class="custom_nav__item"><a class="custom_nav__link" href="#">Home</a></li>
+              <li class="custom_nav__item"><a class="custom_nav__link" href="#">About us</a></li>
+              <li class="custom_nav__item"><a class="custom_nav__link" href="#">Services</a></li>
+              <li class="custom_nav__item"><a class="custom_nav__link" href="#">Featured</a></li>
+              <li class="custom_nav__item"><a class="custom_nav__link" href="#">Contact me</a></li>
+            </ul>
+            <!-- Close button -->
+            <div class="custom_nav__close" id="custom_nav-close">
+              <i class="ri-close-line"></i>
+            </div>
+          </div>
+    
+          <div class="custom_nav__actions">
+            <!-- Toggle button -->
+            <div class="custom_nav__toggle" id="custom_nav-toggle">
+              <i class="ri-menu-line"></i>
+            </div>
+          </div>
+        </nav>
+      </header>
+    
+      <main class="custom_main">
+        <img class="custom_main__bg" src="https://foni.club/uploads/posts/2023-02/1676904775_foni-club-p-oboi-krasivie-kosmos-na-planshet-2.jpg" alt="Background">
+      </main>
+    </nav>
 
   <!-- Home
     ================================================== -->
@@ -1649,6 +1655,25 @@
       "use strict";
       window.scrollReveal = new scrollReveal();
     })(jQuery);
+  </script>
+
+  <script>
+   /*=============== SHOW MENU ===============*/
+const navMenu = document.getElementById("custom_nav-menu"),
+  navToggle = document.getElementById("custom_nav-toggle"),
+  navClose = document.getElementById("custom_nav-close");
+
+/* Menu show */
+navToggle.addEventListener("click", () => {
+  navMenu.classList.add("custom_show-menu");
+});
+
+/* Menu hidden */
+navClose.addEventListener("click", () => {
+  navMenu.classList.remove("custom_show-menu");
+});
+
+
   </script>
 
   <script>
