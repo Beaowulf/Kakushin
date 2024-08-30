@@ -1536,6 +1536,11 @@ video#video_background {
   margin: 0 auto;
   padding: 20px;
   pointer-events: auto;
+
+  border: beige;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0.5px rgba(0, 0, 0, 0.15);
 }
 
 .deco--expander {
@@ -1578,13 +1583,13 @@ video#video_background {
 .slide__img {
   position: relative;
   display: block;
-  border-radius: 50%;
   margin: 0 auto;
+  border-radius: 5%;
 }
 
 .slide__img--small {
-  max-height: 85%;
-  max-width: 85%;
+  max-height: 100%;
+  max-width: 70%;
 }
 
 .action {
