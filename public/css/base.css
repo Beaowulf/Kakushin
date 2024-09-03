@@ -32,6 +32,11 @@
 .hidden{
   display: none;
 }
+
+*, html {
+  scroll-behavior: smooth !important;
+}
+
 html,
 body,
 div,
@@ -1061,6 +1066,7 @@ body {
   -o-object-position: center;
   object-position: center;
   z-index: -1;
+
 }
 
 .custom_search,
@@ -1099,6 +1105,7 @@ body {
   background-color: var(--body-color);
   box-shadow: 0 2px 16px hsla(230, 75%, 32%, 0.15);
   z-index: var(--z-fixed);
+  padding: 0 2rem;
 }
 
 .custom_nav {

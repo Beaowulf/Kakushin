@@ -4,7 +4,9 @@
 @import url("colors/color.css");
 
 /* #PAGE LOAD */
-
+.body {
+  scroll-behavior: smooth;
+}
 body.royal_preloader {
   background: none;
   visibility: hidden;
@@ -305,9 +307,10 @@ body.royal_preloader {
   position: fixed;
   padding-bottom: 10px;
   width: 100%;
-  z-index: 5000;
+  z-index: 100;
   top: 0;
   left: 0;
+  height: 20px;
 }
 #custom_menu-wrap .custom_container .custom_columns {
   margin-top: 10px;
@@ -746,7 +749,8 @@ ul.slimmenu.collapsed li > ul {
   background-color: #fff;
 }
 .background-color-white-trans {
-  background-color: rgba(255, 255, 255, 0.968);
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .background-color-grey {
   background-color: #fbfbfb;
@@ -1330,10 +1334,24 @@ video#video_background {
 }
 
 .sep-2-background {
-  background-image: url("../images/sep-2.jpg");
+  background-image: url("../images/allImages/bg_pattern.svg");
   background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.sep-2-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(193, 172, 145, 0.1),
+    rgba(193, 172, 145, 0.3)
+  );
 }
 #owl-sep-2 {
   position: relative;
@@ -3662,4 +3680,8 @@ figure.youtube a img {
   position: relative;
   height: 100%;
   padding: 50px;
+}
+
+.smooth_scroll {
+  scroll-behavior: smooth;
 }
