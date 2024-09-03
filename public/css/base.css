@@ -1161,6 +1161,7 @@ body {
   position: absolute;
   top: 2rem;
   left: 1.5rem;
+  display: block;
 }
 
 .custom_nav__actions {
@@ -1199,6 +1200,7 @@ body {
   width: 40px;
 }
 
+
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
 @media screen and (min-width: 576px) {
@@ -1228,6 +1230,11 @@ body {
     max-width: 400px;
     margin-inline: auto;
   }
+
+  #kakushin_logo_inside{
+    display: none;
+  }
+  
 }
 
 /* For large devices */
@@ -1255,6 +1262,9 @@ body {
 
   .custom_login__form {
     padding: 3rem 2rem 3.5rem;
+  }
+  #icon_menu{
+   display:none
   }
 }
 
