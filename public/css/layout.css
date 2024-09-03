@@ -884,7 +884,7 @@ ul.slimmenu.collapsed li > ul {
   top: 50%;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
