@@ -4,7 +4,9 @@
 @import url("colors/color.css");
 
 /* #PAGE LOAD */
-
+.body {
+  scroll-behavior: smooth;
+}
 body.royal_preloader {
   background: none;
   visibility: hidden;
@@ -20,7 +22,7 @@ body.royal_preloader {
   left: 0;
   height: auto;
   margin: 0;
-  z-index: 9999999999999999999999999999999999999;
+  z-index: 9999999999999999999999999;
 }
 #royal_preloader.royal_preloader_number:before,
 #royal_preloader.royal_preloader_progress:before {
@@ -277,13 +279,38 @@ body.royal_preloader {
 /* #Navigation
 ================================================== */
 
-#menu-wrap {
+:root {
+  --header-height: 3.5rem;
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(230, 75%, 56%);
+  --title-color: hsl(230, 75%, 15%);
+  --text-color: hsl(230, 12%, 40%);
+  --body-color: hsl(230, 100%, 98%);
+  --container-color: hsl(230, 100%, 97%);
+  --border-color: hsl(230, 25%, 80%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Syne", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*========== z index ==========*/
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+#custom_menu-wrap {
   position: fixed;
   padding-bottom: 30px;
   width: 100%;
-  z-index: 5000;
+  z-index: 100;
   top: 0;
   left: 0;
+  height: 20px;
 }
 
 #relative-memu {
@@ -294,7 +321,7 @@ body.royal_preloader {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.menu-back {
+.custom_menu-back {
   background: rgba(247, 247, 247, 0.8);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -316,7 +343,7 @@ body.royal_preloader {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-.cbp-af-header.cbp-af-header-shrink .logo {
+.cbp-af-header.cbp-af-header-shrink .custom_logo {
   width: 86px;
   height: 16px;
   top: 32px;
@@ -328,7 +355,7 @@ body.royal_preloader {
   transition: all 0.3s ease-out;
 }
 
-.cbp-af-header.cbp-af-header-shrink ul.slimmenu {
+.cbp-af-header.cbp-af-header-shrink ul.custom_slimmenu {
   margin-top: 1px;
   margin-bottom: 0;
   -webkit-transition: all 0.3s ease-out;
@@ -336,29 +363,35 @@ body.royal_preloader {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-.cbp-af-header.cbp-af-header-shrink ul.slimmenu li:first-child {
+.cbp-af-header.cbp-af-header-shrink ul.custom_slimmenu li:first-child {
   background: none;
 }
-.cbp-af-header.cbp-af-header-shrink ul.slimmenu li ul li:first-child {
+.cbp-af-header.cbp-af-header-shrink ul.custom_slimmenu li ul li:first-child {
   background: none;
 }
-ul.slimmenu li ul li a {
+ul.custom_slimmenu li ul li a {
   color: #000;
 }
-ul.slimmenu li ul li a:hover {
+ul.custom_slimmenu li ul li a:hover {
 }
-ul.slimmenu li ul li {
+ul.custom_slimmenu li ul li {
   background: none;
   padding-left: 0;
 }
 
-ul.slimmenu li ul {
+ul.custom_slimmenu li ul {
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.logo {
-  position: absolute;
+.logo_link {
+  width: 134px;
+  height: 25px;
+  z-index: 10000;
+  background: url("../images/logo.png") no-repeat center center;
+  background-size: 105px 20px;
+
+  /* position: absolute;
   width: 134px;
   height: 25px;
   z-index: 10000;
@@ -369,7 +402,7 @@ ul.slimmenu li ul {
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; */
 }
 
 .menu-collapser {
@@ -391,6 +424,12 @@ ul.slimmenu li ul {
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
+.active_wrapper {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
 .collapse-button {
   display: block;
   position: absolute;
@@ -725,7 +764,8 @@ ul.slimmenu.collapsed li > ul {
   background-color: #fff;
 }
 .background-color-white-trans {
-  background-color: rgba(255, 255, 255, 0.968);
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .background-color-grey {
   background-color: #fbfbfb;
@@ -859,7 +899,7 @@ ul.slimmenu.collapsed li > ul {
   top: 50%;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1309,10 +1349,24 @@ video#video_background {
 }
 
 .sep-2-background {
-  background-image: url("../images/sep-2.jpg");
+  background-image: url("../images/allImages/bg_pattern.svg");
   background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.sep-2-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(193, 172, 145, 0.1),
+    rgba(193, 172, 145, 0.3)
+  );
 }
 #owl-sep-2 {
   position: relative;
@@ -1550,6 +1604,11 @@ video#video_background {
   margin: 0 auto;
   padding: 20px;
   pointer-events: auto;
+
+  border: beige;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0.5px rgba(0, 0, 0, 0.15);
 }
 
 .deco--expander {
@@ -1594,11 +1653,12 @@ video#video_background {
   display: block;
   border-radius: 25px;
   margin: 0 auto;
+  border-radius: 5%;
 }
 
 .slide__img--small {
-  max-height: 85%;
-  max-width: 85%;
+  max-height: 100%;
+  max-width: 70%;
 }
 
 .action {
@@ -1624,7 +1684,7 @@ video#video_background {
   margin: 0 40px 40px 0;
   color: #fff;
   border-radius: 50%;
-  background: #cfa144;
+  background: black;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   -webkit-transition-delay: 0.1s;
@@ -1634,7 +1694,7 @@ video#video_background {
 .action--open:focus,
 .action--open:hover {
   color: #fff;
-  background: #cfa144;
+  background: black;
   -webkit-transform: scale3d(1.0865, 1.0865, 1);
   transform: scale3d(1.0865, 1.0865, 1);
 }
@@ -3636,4 +3696,8 @@ figure.youtube a img {
   position: relative;
   height: 100%;
   padding: 50px;
+}
+
+.smooth_scroll {
+  scroll-behavior: smooth;
 }
