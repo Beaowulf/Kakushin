@@ -407,13 +407,12 @@ ul.custom_slimmenu li ul {
 
 .menu-collapser {
   margin: 5px;
-  margin-top: 3rem;
-  margin-right: 40px;
+  margin-top: 2rem;
+  top: 0;
+  right: 2rem;
   width: 30px;
   height: 30px;
   position: absolute;
-  right: 2rem;
-  top: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -506,12 +505,15 @@ ul.custom_slimmenu li ul {
 /* MENU COLLAPSER */
 /* Icon 1 */
 
-.logo_nav_wrapper {
+<<<<<<< Updated upstream ======= .relative-memu {
+  position: relative;
+}
+
+>>>>>>>Stashed changes .logo_nav_wrapper {
   width: 10rem;
   height: 2rem;
 }
-
-#nav-icon1,
+<<<<<<< Updated upstream =======>>>>>>>Stashed changes #nav-icon1,
 #nav-icon2,
 #nav-icon3,
 #nav-icon4 {
@@ -537,7 +539,7 @@ ul.custom_slimmenu li ul {
   height: 4px;
   width: 100%;
   background: black;
-  border-radius: 25px;
+  border-radius: 9px;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -696,6 +698,9 @@ ul.slimmenu li > ul > li ul {
 ul.slimmenu.collapsed {
   padding: 0;
   margin: 0;
+}
+.collapsed {
+  margin-top: 4rem !important;
 }
 ul.slimmenu.collapsed li {
   display: block;
