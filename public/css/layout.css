@@ -22,7 +22,7 @@ body.royal_preloader {
   left: 0;
   height: auto;
   margin: 0;
-  z-index: 9999999999999999999999999;
+  z-index: 9999999999999999999999999999999999999;
 }
 #royal_preloader.royal_preloader_number:before,
 #royal_preloader.royal_preloader_progress:before {
@@ -305,19 +305,14 @@ body.royal_preloader {
 
 #custom_menu-wrap {
   position: fixed;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   width: 100%;
   z-index: 100;
   top: 0;
   left: 0;
   height: 20px;
 }
-
-#relative-memu {
-  position: relative;
-  width: 100%;
-}
-#menu-wrap .container .columns {
+#custom_menu-wrap .custom_container .custom_columns {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -406,13 +401,9 @@ ul.custom_slimmenu li ul {
 }
 
 .menu-collapser {
-  margin: 5px;
-  margin-top: 2rem;
-  top: 0;
-  right: 2rem;
-  width: 30px;
-  height: 30px;
-  position: absolute;
+  width: 60px;
+  height: 45px;
+  /* position: relative; */
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -432,9 +423,9 @@ ul.custom_slimmenu li ul {
 .collapse-button {
   display: block;
   position: absolute;
-  height: 3px;
+  height: 9px;
   width: 100%;
-  background: black;
+  background: #d3531a;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -505,20 +496,12 @@ ul.custom_slimmenu li ul {
 /* MENU COLLAPSER */
 /* Icon 1 */
 
-<<<<<<< Updated upstream ======= .relative-memu {
-  position: relative;
-}
-
->>>>>>>Stashed changes .logo_nav_wrapper {
-  width: 10rem;
-  height: 2rem;
-}
-<<<<<<< Updated upstream =======>>>>>>>Stashed changes #nav-icon1,
+#nav-icon1,
 #nav-icon2,
 #nav-icon3,
 #nav-icon4 {
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -536,7 +519,7 @@ ul.custom_slimmenu li ul {
 #nav-icon4 span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 5px;
   width: 100%;
   background: black;
   border-radius: 9px;
@@ -558,11 +541,11 @@ ul.custom_slimmenu li ul {
 
 #nav-icon3 span:nth-child(2),
 #nav-icon3 span:nth-child(3) {
-  top: 9px;
+  top: 18px;
 }
 
 #nav-icon3 span:nth-child(4) {
-  top: 18px;
+  top: 36px;
 }
 
 #nav-icon3.open span:nth-child(1) {
@@ -653,7 +636,7 @@ ul.slimmenu li .sub-collapser {
   position: absolute;
   right: 0;
   top: 0;
-  width: 20px;
+  width: 48px;
   height: 100%;
   z-index: 999;
   cursor: pointer;
@@ -698,9 +681,6 @@ ul.slimmenu li > ul > li ul {
 ul.slimmenu.collapsed {
   padding: 0;
   margin: 0;
-}
-.collapsed {
-  margin-top: 4rem !important;
 }
 ul.slimmenu.collapsed li {
   display: block;
@@ -1656,7 +1636,6 @@ video#video_background {
 .slide__img {
   position: relative;
   display: block;
-  border-radius: 25px;
   margin: 0 auto;
   border-radius: 5%;
 }
