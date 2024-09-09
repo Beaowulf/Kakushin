@@ -279,11 +279,16 @@ body.royal_preloader {
 
 #menu-wrap {
   position: fixed;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   width: 100%;
   z-index: 5000;
   top: 0;
   left: 0;
+}
+
+#relative-memu {
+  position: relative;
+  width: 100%;
 }
 #menu-wrap .container .columns {
   margin-top: 10px;
@@ -368,10 +373,14 @@ ul.slimmenu li ul {
 }
 
 .menu-collapser {
-  width: 60px;
-  height: 45px;
-  position: relative;
-  margin: 50px auto;
+  margin: 5px;
+  margin-top: 3rem;
+  margin-right: 40px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 2rem;
+  top: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -385,9 +394,9 @@ ul.slimmenu li ul {
 .collapse-button {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 3px;
   width: 100%;
-  background: #d3531a;
+  background: black;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -458,12 +467,17 @@ ul.slimmenu li ul {
 /* MENU COLLAPSER */
 /* Icon 1 */
 
+.logo_nav_wrapper {
+  width: 10rem;
+  height: 2rem;
+}
+
 #nav-icon1,
 #nav-icon2,
 #nav-icon3,
 #nav-icon4 {
-  width: 60px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -481,10 +495,10 @@ ul.slimmenu li ul {
 #nav-icon4 span {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 4px;
   width: 100%;
-  background: #d3531a;
-  border-radius: 9px;
+  background: black;
+  border-radius: 25px;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -503,11 +517,11 @@ ul.slimmenu li ul {
 
 #nav-icon3 span:nth-child(2),
 #nav-icon3 span:nth-child(3) {
-  top: 18px;
+  top: 9px;
 }
 
 #nav-icon3 span:nth-child(4) {
-  top: 36px;
+  top: 18px;
 }
 
 #nav-icon3.open span:nth-child(1) {
@@ -598,7 +612,7 @@ ul.slimmenu li .sub-collapser {
   position: absolute;
   right: 0;
   top: 0;
-  width: 48px;
+  width: 20px;
   height: 100%;
   z-index: 999;
   cursor: pointer;
