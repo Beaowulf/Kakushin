@@ -32,6 +32,11 @@
 .hidden{
   display: none;
 }
+
+*, html {
+  scroll-behavior: smooth !important;
+}
+
 html,
 body,
 div,
@@ -1044,9 +1049,166 @@ body {
   font-weight: 600;
 }
 
+/* custom navbar */
+.custom_main {
+  position: relative;
+  height: 100vh;
+}
 
-<<<<<<< Updated upstream
-=======
+.custom_main__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  z-index: -1;
+
+}
+
+.custom_search,
+.custom_login {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-modal);
+  background-color: hsla(230, 75%, 15%, 0.1);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  padding: 8rem 1.5rem 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.custom_search__close,
+.custom_login__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+/*=============== HEADER & NAV ===============*/
+.custom_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--body-color);
+  box-shadow: 0 2px 16px hsla(230, 75%, 32%, 0.15);
+  z-index: var(--z-fixed);
+  padding: 2rem 2rem;
+}
+
+.custom_nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom_nav__logo {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color 0.2s;
+}
+
+.custom_nav__menu {
+  /* Navigation for mobile devices */
+}
+
+@media screen and (max-width: 1023px) {
+  .custom_nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: var(--body-color);
+    box-shadow: 0 8px 16px hsla(230, 75%, 32%, 0.15);
+    width: 100%;
+    padding-block: 4.5rem 4rem;
+    transition: top 0.2s;
+  }
+}
+
+.custom_nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  text-align: center;
+}
+
+.custom_nav__link {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color 0.2s;
+}
+
+.custom_nav__close {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.5rem;
+}
+
+#kakushin_logo_inside{
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+  display: block;
+}
+
+.custom_nav__actions {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.custom_nav__search,
+.custom_nav__login,
+.custom_nav__toggle,
+.custom_nav__close {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+:is(.custom_nav__logo, .custom_nav__search, .custom_nav__login, .custom_nav__toggle, .custom_nav__link):hover {
+  color: var(--first-color);
+}
+
+/* Show menu */
+.custom_show-menu {
+  top: 0;
+}
+
+#navbar_logo{
+  width: 90px;
+  height: auto;
+}
+
+#icon_menu{
+  height: 40px;
+  width: 40px;
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .custom_search,
+  .custom_login {
+    padding-top: 10rem;
+  }
+
 .custom_main__bg {
   position: absolute;
   top: 0;
@@ -1269,4 +1431,4 @@ body {
     margin-inline: auto;
   }
 }
->>>>>>> Stashed changes
+}
