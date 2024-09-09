@@ -285,6 +285,11 @@ body.royal_preloader {
   top: 0;
   left: 0;
 }
+
+#relative-memu {
+  position: relative;
+  width: 100%;
+}
 #menu-wrap .container .columns {
   margin-top: 10px;
   margin-bottom: 10px;
