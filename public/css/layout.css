@@ -282,8 +282,11 @@ body.royal_preloader {
   padding-bottom: 30px;
   width: 100%;
   z-index: 5000;
+  display: flex;
+  align-items: center;
   top: 0;
   left: 0;
+  height: auto;
 }
 
 #relative-memu {
