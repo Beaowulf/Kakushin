@@ -1600,7 +1600,7 @@ video#video_background {
 .slide__img {
   position: relative;
   display: block;
-  border-radius: 25px;
+  border-radius: 80px;
   margin: 0 auto;
 }
 
