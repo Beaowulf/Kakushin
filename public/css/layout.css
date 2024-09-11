@@ -3628,6 +3628,7 @@ figure.youtube a img {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 
 .swiper-slide img {
