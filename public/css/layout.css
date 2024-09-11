@@ -3645,3 +3645,10 @@ figure.youtube a img {
   height: 100%;
   padding: 50px;
 }
+
+
+.footer_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
