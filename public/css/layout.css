@@ -1429,6 +1429,10 @@ video#video_background {
   background-repeat: no-repeat;
 }
 .counters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 20rem;
   width: 30rem;
@@ -1475,7 +1479,20 @@ video#video_background {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
+@media (max-width: 606px) {
+  .counters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 42rem;
+    height: 30rem;
+  }
+  .counter-jquery-start {
+    font-size: 31rem;
+    margin-left: 25px;
+  }
+}
 /* #Work
 ================================================== */
 
