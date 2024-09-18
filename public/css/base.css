@@ -32,11 +32,6 @@
 .hidden{
   display: none;
 }
-
-*, html {
-  scroll-behavior: smooth !important;
-}
-
 html,
 body,
 div,
@@ -463,8 +458,7 @@ input::-moz-focus-inner {
 }
 
 /* Mobile */
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-}
+
 
 /* Custom shadow title */
 .custom_shadow-title_top {
@@ -485,7 +479,7 @@ input::-moz-focus-inner {
   position: absolute;
   width: 100%;
   left: 0;
-  top: -125px;
+  top: -75px;
   color: #414141;
   opacity: 0.1;
   font-family: "Montserrat", sans-serif;
@@ -583,7 +577,7 @@ input::-moz-focus-inner {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 8rem;
-  background-image: url(../images/bg_image_box.png);
+  background-image: url(../images/4581.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -883,6 +877,9 @@ body {
   html {
     font-size: 55%;
   }
+  .custom_shadow-title{
+    font-size: 80px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -902,6 +899,13 @@ body {
   html {
     font-size: 50%;
   }
+  .custom_shadow-title {
+    font-size: 45px;
+    top: -60px;
+  }
+  .section-title h2{
+    font-size: 20px;
+  }
 }
 
 .projects_btn {
@@ -914,14 +918,23 @@ body {
 
 /* Box Containers with 4 boxex */
 .fourBoxContainer{
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 8rem;
+  gap: 5rem;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+.fourBox{
+  flex-basis: calc(15% - 20px);
+  margin-bottom: 20px;
 }
 
+.counter-jquery-start{
+  font-size: 22rem;
+    margin-left: 25px;
+}
 .healthcheck_parent{
   margin: 5rem auto;
   display: flex;
@@ -1049,386 +1062,107 @@ body {
   font-weight: 600;
 }
 
-/* custom navbar */
-.custom_main {
-  position: relative;
-  height: 100vh;
-}
 
-.custom_main__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-  z-index: -1;
 
-}
 
-.custom_search,
-.custom_login {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: var(--z-modal);
-  background-color: hsla(230, 75%, 15%, 0.1);
-  -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
-  padding: 8rem 1.5rem 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-}
 
-.custom_search__close,
-.custom_login__close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 1.5rem;
-  color: var(--title-color);
-  cursor: pointer;
-}
-
-/*=============== HEADER & NAV ===============*/
-.custom_header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--body-color);
-  box-shadow: 0 2px 16px hsla(230, 75%, 32%, 0.15);
-  z-index: var(--z-fixed);
-  padding: 2rem 2rem;
-}
-
-.custom_nav {
-  height: var(--header-height);
+.parent-newslider{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
 }
 
-.custom_nav__logo {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
-  transition: color 0.2s;
-}
 
-.custom_nav__menu {
-  /* Navigation for mobile devices */
-}
 
-@media screen and (max-width: 1023px) {
-  .custom_nav__menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    background-color: var(--body-color);
-    box-shadow: 0 8px 16px hsla(230, 75%, 32%, 0.15);
-    width: 100%;
-    padding-block: 4.5rem 4rem;
-    transition: top 0.2s;
-  }
+.card-wrapper {
+  max-width: 1100px;
+    margin: auto;
+    padding: 85px 10px;
+    overflow: hidden;
 }
-
-.custom_nav__list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2.5rem;
-  text-align: center;
+.card-list .card-item {
+  list-style: none;
 }
-
-.custom_nav__link {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
-  transition: color 0.2s;
-}
-
-.custom_nav__close {
-  position: absolute;
-  top: 1.15rem;
-  right: 1.5rem;
-}
-
-#kakushin_logo_inside{
-  position: absolute;
-  top: 2rem;
-  left: 1.5rem;
+.card-list .card-item .card-link {
   display: block;
+  background: #fff;
+  padding: 18px;
+  user-select: none;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
 }
-
-.custom_nav__actions {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 1rem;
-  column-gap: 1rem;
+.card-list .card-item .card-link:active {
+  cursor: grabbing;
 }
-
-.custom_nav__search,
-.custom_nav__login,
-.custom_nav__toggle,
-.custom_nav__close {
-  font-size: 1.25rem;
-  color: var(--title-color);
-  cursor: pointer;
-  transition: color 0.2s;
+.card-list .card-item .card-link:hover {
+  border-color: #5372F0;
 }
-
-:is(.custom_nav__logo, .custom_nav__search, .custom_nav__login, .custom_nav__toggle, .custom_nav__link):hover {
-  color: var(--first-color);
-}
-
-/* Show menu */
-.custom_show-menu {
-  top: 0;
-}
-
-#navbar_logo{
-  width: 90px;
-  height: auto;
-}
-
-#icon_menu{
-  height: 40px;
-  width: 40px;
-}
-
-
-/*=============== BREAKPOINTS ===============*/
-/* For medium devices */
-@media screen and (min-width: 576px) {
-  .custom_search,
-  .custom_login {
-    padding-top: 10rem;
-  }
-
-.custom_main__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+.card-list .card-link .card-image {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-  z-index: -1;
-
+  border-radius: 10px;
+  height: 35rem;
+  object-fit: contain;
 }
-
-.custom_search,
-.custom_login {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: var(--z-modal);
-  background-color: hsla(230, 75%, 15%, 0.1);
-  -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
-  padding: 8rem 1.5rem 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
+.card-list .card-link .badge {
+  color: #5372F0;
+  width: fit-content;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  font-weight: 500;
+  background: #DDE4FF;
+  margin: 16px 0 18px;
 }
-
-.custom_search__close,
-.custom_login__close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  font-size: 1.5rem;
-  color: var(--title-color);
+.card-list .card-link .badge-designer {
+  color: #B22485;
+  background: #F7DFF5;
+}
+.card-list .card-link .badge-marketer {
+  color: #B25A2B;
+  background: #FFE3D2;
+}
+.card-list .card-link .badge-gamer {
+  color: #205C20;
+  background: #D6F8D6;
+}
+.card-list .card-link .badge-editor {
+  color: #856404;
+  background: #fff3cd;
+}
+.card-list .card-link .card-title {
+  color: #000;
+  font-size: 1.19rem;
+  font-weight: 600;
+}
+.card-list .card-link .card-button {
+  height: 35px;
+  width: 35px;
+  color: #5372F0;
+  margin: 30px 0 5px;
+  background: none;
   cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #5372F0;
+  transform: rotate(-45deg);
+  transition: 0.4s ease;
 }
-
-/*=============== HEADER & NAV ===============*/
-.custom_header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--body-color);
-  box-shadow: 0 2px 16px hsla(230, 75%, 32%, 0.15);
-  z-index: var(--z-fixed);
-  padding: 2rem 2rem;
+.card-list .card-link:hover .card-button {
+  color: #fff;
+  background: #f05353;
 }
-
-.custom_nav {
-  height: var(--header-height);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: #CFA144;
 }
-
-.custom_nav__logo {
-  color: var(--title-color);
-    font-weight: var(--font-semi-bold);
-    transition: color 0.2s;
-    position: relative;
-    z-index: 1;
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
 }
-
-.custom_nav__menu {
-  /* Navigation for mobile devices */
-}
-
-@media screen and (max-width: 1023px) {
-  .custom_nav__menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    background-color: var(--body-color);
-    box-shadow: 0 8px 16px hsla(230, 75%, 32%, 0.15);
-    width: 100%;
-    padding-block: 4.5rem 4rem;
-    transition: top 0.2s;
-  }
-}
-
-.custom_nav__list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2.5rem;
-  text-align: center;
-}
-
-.custom_nav__link {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
-  transition: color 0.2s;
-}
-
-.custom_nav__close {
-  position: absolute;
-  top: 1.15rem;
-  right: 1.5rem;
-  display: flex;
-}
-
-#kakushin_logo_inside{
-  position: absolute;
-  top: 2rem;
-  left: 1.5rem;
-  display: block;
-}
-
-.custom_nav__actions {
-  display: flex;
-  align-items: center;
-  -moz-column-gap: 1rem;
-  column-gap: 1rem;
-}
-
-.custom_nav__search,
-.custom_nav__login,
-.custom_nav__toggle,
-.custom_nav__close {
-  font-size: 1.25rem;
-  color: var(--title-color);
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-:is(.custom_nav__logo, .custom_nav__search, .custom_nav__login, .custom_nav__toggle, .custom_nav__link):hover {
-  color: var(--first-color);
-}
-
-/* Show menu */
-.custom_show-menu {
-  top: 0;
-}
-
-#navbar_logo{
-  width: 90px;
-  height: auto;
-}
-
-#icon_menu{
-  height: 40px;
-  width: 40px;
-}
-
-
-/*=============== BREAKPOINTS ===============*/
-/* For medium devices */
-@media screen and (min-width: 576px) {
-  .custom_search,
-  .custom_login {
-    padding-top: 10rem;
-  }
-
-  .custom_search__form {
-    max-width: 450px;
-    margin-inline: auto;
-  }
-
-  .custom_search__close,
-  .custom_login__close {
-    width: -moz-max-content;
-    width: max-content;
-    top: 5rem;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    font-size: 2rem;
-    color: #fff;
-  }
-
-  .custom_login__form {
-    max-width: 400px;
-    margin-inline: auto;
-  }
-
-  #kakushin_logo_inside{
-    display: none;
-  }
-  
-}
-
-/* For large devices */
-@media screen and (min-width: 1023px) {
-  .custom_nav {
-    height: calc(var(--header-height) + 2rem);
-    -moz-column-gap: 3rem;
-    column-gap: 3rem;
-  }
-
-  .custom_nav__close,
-  .custom_nav__toggle {
-    display: none;
-  }
-
-  .custom_nav__menu {
-    margin-left: auto;
-  }
-
-  .custom_nav__list {
-    flex-direction: row;
-    -moz-column-gap: 3rem;
-    column-gap: 3rem;
-  }
-
-  .custom_login__form {
-    padding: 3rem 2rem 3.5rem;
-  }
-  #icon_menu{
-   display:none
-  }
-}
-
-
-@media screen and (min-width: 1150px) {
-  .custom_container {
-    margin-inline: auto;
-  }
-}
+.card-wrapper .swiper-slide-button {
+  color: #CFA144;
+  margin-top: -35px;
 }
