@@ -563,7 +563,7 @@ input::-moz-focus-inner {
   text-align: center;
   padding: 1.5rem 2rem 1.5rem 2rem;
 
-  backdrop-filter: blur(2px); /* Adjust the blur amount as needed */
+  backdrop-filter: blur(4px); /* Adjust the blur amount as needed */
   background-color: rgba(
     255,
     255,
@@ -576,10 +576,11 @@ input::-moz-focus-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 8rem;
+  padding: 8rem 30%;
   background-image: url(../images/4581.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .box img {
   max-width: 100%;
@@ -625,6 +626,7 @@ input::-moz-focus-inner {
   color: rgb(58, 58, 58);
   text-align: left;
   font-size: 15px;
+  font-weight: bolder;
 }
 
 
