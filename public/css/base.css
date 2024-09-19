@@ -1069,7 +1069,7 @@ body {
 .parent-newslider{
   display: flex;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 1rem;
 }
 
 
@@ -1105,6 +1105,7 @@ body {
   border-radius: 10px;
   height: 35rem;
   object-fit: contain;
+  margin-top: 20px;
 }
 .card-list .card-link .badge {
   color: #5372F0;
@@ -1133,7 +1134,7 @@ body {
   background: #fff3cd;
 }
 .card-list .card-link .card-title {
-  color: #000;
+  color: #ffffff;
   font-size: 1.19rem;
   font-weight: 600;
 }
@@ -1165,4 +1166,8 @@ body {
 .card-wrapper .swiper-slide-button {
   color: #CFA144;
   margin-top: -35px;
+}
+.card-title{
+  font-size: 30px;
+  background-color: black;
 }
