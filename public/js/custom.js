@@ -218,6 +218,7 @@
 	(function() {
 		document.documentElement.className = 'js';
 		var slideshow = new CircleSlideshow(document.getElementById('slideshow'));
+	
 	})();
 
 

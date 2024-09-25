@@ -577,7 +577,7 @@ input::-moz-focus-inner {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 8rem 30%;
-  background-image: url(../images/4581.jpg);
+  background-image: url(../images/bg-productscont.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -643,9 +643,9 @@ input::-moz-focus-inner {
   background: #f7f7f7;
 }
 
-#about {
-  margin-top: 10rem;
-}
+/* #about {
+  margin-top: 0rem;
+} */
 
 .blog_title {
   font-weight: 600;
@@ -1172,4 +1172,17 @@ body {
 .card-title{
   font-size: 30px;
   background-color: black;
+}
+
+.mail-us{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gmail-image{
+  height: 20px;
+  width: 135px;
+  margin-top: 8px;
 }

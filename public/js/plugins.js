@@ -4677,26 +4677,26 @@ THE SOFTWARE.
   /**
    * Circle Slideshow
    */
-  function CircleSlideshow(el, options) {
-    this.el = el;
-    this.options = extend({}, this.options);
-    extend(this.options, options);
+  // function CircleSlideshow(el, options) {
+  //   this.el = el;
+  //   this.options = extend({}, this.options);
+  //   extend(this.options, options);
 
-    // items
-    this.items = [].slice.call(this.el.querySelectorAll(".slide"));
-    // total items
-    this.itemsTotal = this.items.length;
-    if (this.itemsTotal < 2) return;
+  //   // items
+  //   this.items = [].slice.call(this.el.querySelectorAll(".slide"));
+  //   // total items
+  //   this.itemsTotal = this.items.length;
+  //   if (this.itemsTotal < 2) return;
 
-    // content close control
-    this.closeCtrl = this.el.querySelector(".action--close");
-    // index of current slide
-    this.current = 0;
-    // all items are closed initially
-    this.isClosed = true;
+  //   // content close control
+  //   this.closeCtrl = this.el.querySelector(".action--close");
+  //   // index of current slide
+  //   this.current = 0;
+  //   // all items are closed initially
+  //   this.isClosed = true;
 
-    this._init();
-  }
+  //   this._init();
+  // }
 
   CircleSlideshow.prototype.options = {};
 

@@ -3064,7 +3064,7 @@ figure.youtube a img {
   font-size: 10px;
   line-height: 14px;
   color: #101010;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 #ajax-form label {
   display: block;
@@ -3580,7 +3580,7 @@ figure.youtube a img {
     display: none;
   }
   .padding-top-bottom {
-    padding-top: 1px;
+    padding-top: 90px;
     padding-bottom: 50px;
   }
 }
