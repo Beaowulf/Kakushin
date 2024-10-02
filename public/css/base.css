@@ -23,10 +23,6 @@
 /* #Reset & Basics (Inspired by E. Meyers)
 ================================================== */
 // Required Core Stylesheet
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-
-// Optional Theme Stylesheet
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 
 .hidden{
@@ -1019,10 +1015,7 @@ body {
 
 
 /* Carousel */
-.glide{
-  margin: 0 auto;
-  padding: 5rem;
-}
+
 .box_parent{
   display: flex;
   justify-content: center;
@@ -1030,17 +1023,6 @@ body {
   gap: 1rem;
   flex-direction: column;
 }
-.glide__arrows{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
-}
-.glide__arrow{
-  width: 150px;
-}
-
 
 .box_title{
   font-size: 24px;
