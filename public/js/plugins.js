@@ -1806,7 +1806,7 @@ if (typeof Object.create !== "function") {
     autoPlay: false,
     stopOnHover: false,
     navigation: false,
-    navigationText: ["prev", "next"],
+    navigationText: ["", ""],
     rewindNav: true,
     scrollPerPage: false,
     pagination: true,
