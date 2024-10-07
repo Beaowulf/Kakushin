@@ -1174,3 +1174,6 @@ body {
   justify-content: center;
   align-items: center;
 }
+.whatsapp-icon > a{
+  margin-top: 5px;
+}
