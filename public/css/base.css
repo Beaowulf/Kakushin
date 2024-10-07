@@ -1167,3 +1167,10 @@ body {
   width: 135px;
   margin-top: 8px;
 }
+
+.whatsapp-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
