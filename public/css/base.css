@@ -1177,3 +1177,10 @@ body {
 .whatsapp-icon > a{
   margin-top: 5px;
 }
+
+.whatsapp_chat_icon{
+  position: fixed;
+  bottom: 60px;
+  right: 15px;
+  z-index: 9999999;
+}

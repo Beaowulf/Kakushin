@@ -3549,7 +3549,7 @@ figure.youtube a img {
 @media only screen and (max-width: 1000px) {
   .hero-text h5 {
     font-size: 50px;
-    line-height: 30px;
+    line-height: 50px;
   }
   .hero-text h5 span {
     font-size: 80px;
@@ -3590,7 +3590,7 @@ figure.youtube a img {
 @media only screen and (max-width: 600px) {
   .hero-text h5 {
     font-size: 40px;
-    line-height: 25px;
+    line-height: 40px;
   }
   .hero-text h5 span {
     font-size: 60px;
